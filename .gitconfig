@@ -1,0 +1,6 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Evy Bongers
+	email = evy@evybongers.nl
+[alias]
+	lg = log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
