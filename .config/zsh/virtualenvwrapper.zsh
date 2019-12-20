@@ -3,7 +3,7 @@ if command -v virtualenvwrapper.sh &>/dev/null; then
     export PROJECT_HOME=$HOME/code
     export VIRTUALENVWRAPPER_PYTHON=$(command -v python3)
     export VIRTUALENVWRAPPER_SCRIPT=$(command -v virtualenvwrapper.sh)
-    source /usr/local/bin/virtualenvwrapper_lazy.sh
+    source "${VIRTUALENVWRAPPER_SCRIPT}"
 
     # Support for bash
     PROMPT_COMMAND='prompt'
