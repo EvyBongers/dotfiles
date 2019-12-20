@@ -1,7 +1,7 @@
 function switch_branch() {
     local current_branch local_branch target_branch
 
-    current_branch="$(git_current_branch)"
+    current_branch="$(home rev-parse --abbrev-ref HEAD)"
 
     if command -v hostname &>/dev/null; then
         local_branch="$(hostname -s)"
