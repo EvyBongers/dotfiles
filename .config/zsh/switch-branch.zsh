@@ -21,5 +21,5 @@ function switch_branch() {
     fi
 
     echo "switching to branch '${target_branch}'"
-    git --git-dir="${HOME}/.files.git" --work-tree="${HOME}" checkout "${local_branch}"
+    git --git-dir="${HOME}/.files.git" --work-tree="${HOME}" checkout "${target_branch}"
 }
