@@ -34,21 +34,21 @@ if has("autocmd")
   autocmd BufNewFile,BufRead *.py,*.pyw,*.c,*.h match TrailWhitespace /\s\+$/
   autocmd BufNewFile,BufRead *.py,*.pyw,*.c,*.h match UnwantedTab /\t/
 
-  autocmd FileType bzl          :so ~/.vim/bzl.vim
-  autocmd FileType c            :so ~/.vim/c.vim
-  autocmd FileType cpp          :so ~/.vim/cpp.vim
-  autocmd FileType css          :so ~/.vim/css.vim
-  autocmd FileType go           :so ~/.vim/go.vim
-  autocmd FileType html         :so ~/.vim/html.vim
-  autocmd FileType javascript   :so ~/.vim/js.vim
-  autocmd FileType json         :so ~/.vim/json.vim
-  autocmd FileType markdown     :so ~/.vim/md.vim
-  autocmd FileType php          :so ~/.vim/php.vim
-  autocmd FileType python       :so ~/.vim/python.vim
-  autocmd FileType ruby         :so ~/.vim/ruby.vim
-  autocmd FileType sh           :so ~/.vim/sh.vim
-  autocmd FileType text         :so ~/.vim/txt.vim
-  autocmd FileType yaml         :so ~/.vim/yaml.vim
+  autocmd FileType bzl          :so ~/.config/vim/bzl.vim
+  autocmd FileType c            :so ~/.config/vim/c.vim
+  autocmd FileType cpp          :so ~/.config/vim/cpp.vim
+  autocmd FileType css          :so ~/.config/vim/css.vim
+  autocmd FileType go           :so ~/.config/vim/go.vim
+  autocmd FileType html         :so ~/.config/vim/html.vim
+  autocmd FileType javascript   :so ~/.config/vim/js.vim
+  autocmd FileType json         :so ~/.config/vim/json.vim
+  autocmd FileType markdown     :so ~/.config/vim/md.vim
+  autocmd FileType php          :so ~/.config/vim/php.vim
+  autocmd FileType python       :so ~/.config/vim/python.vim
+  autocmd FileType ruby         :so ~/.config/vim/ruby.vim
+  autocmd FileType sh           :so ~/.config/vim/sh.vim
+  autocmd FileType text         :so ~/.config/vim/txt.vim
+  autocmd FileType yaml         :so ~/.config/vim/yaml.vim
 endif
 
 " Enable python syntax highlighting
