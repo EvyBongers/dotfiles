@@ -11,3 +11,4 @@ alias egrep="egrep --color=auto --exclude-dir=.git --exclude-dir=.hg --exclude-d
 alias view="/usr/bin/vim -R"
 
 alias signal-desktop="/usr/bin/signal-desktop --use-tray-icon"
+alias tree="tree -a -I .git"
