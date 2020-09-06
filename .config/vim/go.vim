@@ -10,7 +10,7 @@ set
       \ softtabstop=4
       \ tabstop=4
 
-let b:ale_linters = ['phpcs']
+let b:ale_linters = ['gofmt']
 let b:ale_fixers = [
       \   'remove_trailing_lines',
       \   'trim_whitespace',
