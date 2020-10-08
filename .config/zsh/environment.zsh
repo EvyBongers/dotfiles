@@ -10,3 +10,8 @@ if command -v go &>/dev/null; then
     export GOPATH="${HOME}/go"
     export PATH="${GOPATH}/bin:$PATH"
 fi
+
+if command -v vim &>/dev/null; then
+    # Set vimrc's location and source it on vim startup
+    export VIMINIT='let $MYVIMRC="$HOME/.config/vim/vimrc" | source $MYVIMRC'
+fi
