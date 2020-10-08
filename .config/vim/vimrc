@@ -1,4 +1,12 @@
 set nocompatible                " required
+
+" Environment
+set directory=$XDG_CACHE_HOME/vim,~/,/tmp
+set backupdir=$XDG_CACHE_HOME/vim,~/,/tmp
+set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
+set runtimepath=$HOME/.config/vim,$HOME/.config/vim/after,$VIM,$VIMRUNTIME
+let $MYVIMRC="$HOME/.config/vim/vimrc"
+
 filetype off                    " required
 
 filetype plugin indent on       " required
