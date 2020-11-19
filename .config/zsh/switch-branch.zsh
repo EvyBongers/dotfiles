@@ -14,13 +14,13 @@ function switch_branch() {
         return 1
     fi
 
-    if [[ "${current_branch}" == "master" ]]; then
+    if [[ "${current_branch}" == "main" ]]; then
         target_branch="${local_branch}"
         # Create the local branch if it does not exist
         home branch -l "${local_branch}" |grep -q "${local_branch}" ||
             git --git-dir="${HOME}/.files.git" --work-tree="${HOME}" branch "${target_branch}"
     else
-        target_branch="master"
+        target_branch="main"
     fi
 
     echo "switching to branch '${target_branch}'"
