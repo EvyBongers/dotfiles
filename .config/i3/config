@@ -194,7 +194,14 @@ bar {
 #
 # Screenlocker
 #
-bindsym control+Mod1+L exec i3lock
+
+# Automatically lock after 300 seconds
+exec --no-startup-id xset s 300 5
+exec --no-startup-id xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock
+
+# Configure manual screen locking
+bindsym control+Mod1+L exec xset s activate
+
 
 #
 # Media keys
