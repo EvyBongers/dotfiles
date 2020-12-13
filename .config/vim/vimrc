@@ -54,9 +54,12 @@ if has("autocmd")
   autocmd FileType php          :so ~/.config/vim/php.vim
   autocmd FileType python       :so ~/.config/vim/python.vim
   autocmd FileType ruby         :so ~/.config/vim/ruby.vim
+  autocmd FileType scss         :so ~/.config/vim/scss.vim
   autocmd FileType sh           :so ~/.config/vim/sh.vim
   autocmd FileType text         :so ~/.config/vim/txt.vim
   autocmd FileType yaml         :so ~/.config/vim/yaml.vim
+  autocmd FileType typescript   :so ~/.config/vim/ts.vim
+  autocmd FileType xml          :so ~/.config/vim/xml.vim
 endif
 
 " Enable python syntax highlighting
