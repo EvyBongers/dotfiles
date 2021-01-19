@@ -1,13 +1,15 @@
 /*
 !/README.md
 !/.Xmodmap
+!/.config/i3/
+!/.config/i3status/
+!/.config/sway/
 !/.config/terminator
 !/.config/vim
 !/.config/yamllint
 !/.config/zsh
 !/.gitconfig
 !/.gitignore
-!/.i3
 !/.local/share/fonts
 !/.profile
 !/.ssh/authorized_keys
