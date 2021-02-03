@@ -14,7 +14,7 @@ if command -v virtualenvwrapper.sh &>/dev/null; then
     {
         if [ "$PWD" != "$MYOLDPWD" ]; then
             MYOLDPWD="$PWD"
-            test -e .venv && workon `cat .venv`
+            test -f .venv && workon `cat .venv`
         fi
     }
 fi
