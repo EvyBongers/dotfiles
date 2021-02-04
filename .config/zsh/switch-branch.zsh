@@ -9,6 +9,9 @@ function switch_branch() {
         local_branch="$(hostnamectl --static)"
     fi
 
+    if [[ -n "${1:-}" ]]; then
+        local_branch="${1}"
+    fi
     if [[ "${local_branch:-}" == "" ]]; then
         echo "Failed to determine local branch" >&2
         return 1
