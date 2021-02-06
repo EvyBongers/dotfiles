@@ -70,6 +70,7 @@ input type:keyboard {
     xkb_layout us
     xkb_variant euro
     xkb_options compose:ralt
+    xkb_numlock disabled
 }
 
 ### Key bindings
