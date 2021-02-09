@@ -51,6 +51,13 @@ exec swayidle -w \
     timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
     before-sleep 'swaylock -f -c 000000' \
     lock 'swaylock -f -c 000000'
+#
+# Prevent screen lock when application is fullscreen
+#
+# xwayland version
+for_window [class="."] inhibit_idle fullscreen
+# wayland vesion
+for_window [app_id="."] inhibit_idle fullscreen
 
 ### Input configuration
 #
