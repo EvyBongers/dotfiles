@@ -1,11 +1,7 @@
 set nocompatible                " required
 
-" Environment
-set directory=$XDG_CACHE_HOME/vim,~/,/tmp
-set backupdir=$XDG_CACHE_HOME/vim,~/,/tmp
-set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
-set runtimepath=$HOME/.config/vim,$HOME/.config/vim/after,$VIM,$VIMRUNTIME
-let $MYVIMRC="$HOME/.config/vim/vimrc"
+" https://gist.github.com/dkasak/6ae1c6bf0d771155f23b
+:source ~/.config/vim/xdg.vim
 
 filetype off                    " required
 
