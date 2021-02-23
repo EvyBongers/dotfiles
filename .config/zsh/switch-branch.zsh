@@ -1,20 +1,28 @@
+function get_short_hostname() {
+    if command -v hostnamectl &>/dev/null; then
+        hostnamectl --static
+        return
+    fi
+    if command -v sysctl &>/dev/null; then
+        sysctl -n kernel.hostname
+        return
+    fi
+    if command -v hostname &>/dev/null; then
+        hostname -s
+        return
+    fi
+}
 function switch_branch() {
     local current_branch local_branch target_branch
 
-    current_branch="$(home branch --show-current)"
-    if [[ -z "${current_branch}" ]]; then
+    declare -r current_branch="$(home branch --show-current)"
+    if [[ -z "${current_branch:-}" ]]; then
         echo "Currently in detached head" >&2
         return 1
     fi
 
-    if command -v hostname &>/dev/null; then
-        local_branch="$(hostname -s)"
-    elif command -v hostnamectl &>/dev/null; then
-        local_branch="$(hostnamectl --static)"
-    fi
-
-    local_branch="${1:-$local_branch}"
-    if [[ "${local_branch:-}" == "" ]]; then
+    declare -r local_branch="${1:-$(get_short_hostname)}"
+    if [[ -z "${local_branch:-}" ]]; then
         echo "Failed to determine local branch" >&2
         return 1
     fi
@@ -29,5 +37,5 @@ function switch_branch() {
     fi
 
     echo "switching to branch '${target_branch}'"
-    git --git-dir="${HOME}/.files.git" --work-tree="${HOME}" checkout "${target_branch}"
+    home checkout "${target_branch}"
 }
