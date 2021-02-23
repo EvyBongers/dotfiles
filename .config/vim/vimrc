@@ -1,11 +1,10 @@
-set nocompatible                " required
+set nocompatible
 
 " https://gist.github.com/dkasak/6ae1c6bf0d771155f23b
 :source ~/.config/vim/xdg.vim
 
-filetype off                    " required
-
-filetype plugin indent on       " required
+filetype off
+filetype plugin indent on
 
 if has('gui_running')
   set background=light          " started as gvim, so we'll have a light background
@@ -38,24 +37,24 @@ if has("autocmd")
   autocmd BufNewFile,BufRead *.py,*.pyw,*.c,*.h match TrailWhitespace /\s\+$/
   autocmd BufNewFile,BufRead *.py,*.pyw,*.c,*.h match UnwantedTab /\t/
 
-  autocmd FileType bzl          :so ~/.config/vim/bzl.vim
-  autocmd FileType c            :so ~/.config/vim/c.vim
-  autocmd FileType cpp          :so ~/.config/vim/cpp.vim
-  autocmd FileType css          :so ~/.config/vim/css.vim
-  autocmd FileType go           :so ~/.config/vim/go.vim
-  autocmd FileType html         :so ~/.config/vim/html.vim
-  autocmd FileType javascript   :so ~/.config/vim/js.vim
-  autocmd FileType json         :so ~/.config/vim/json.vim
-  autocmd FileType markdown     :so ~/.config/vim/md.vim
-  autocmd FileType php          :so ~/.config/vim/php.vim
-  autocmd FileType python       :so ~/.config/vim/python.vim
-  autocmd FileType ruby         :so ~/.config/vim/ruby.vim
-  autocmd FileType scss         :so ~/.config/vim/scss.vim
-  autocmd FileType sh           :so ~/.config/vim/sh.vim
-  autocmd FileType text         :so ~/.config/vim/txt.vim
-  autocmd FileType yaml         :so ~/.config/vim/yaml.vim
-  autocmd FileType typescript   :so ~/.config/vim/ts.vim
-  autocmd FileType xml          :so ~/.config/vim/xml.vim
+  autocmd FileType bzl          :source ~/.config/vim/bzl.vim
+  autocmd FileType c            :source ~/.config/vim/c.vim
+  autocmd FileType cpp          :source ~/.config/vim/cpp.vim
+  autocmd FileType css          :source ~/.config/vim/css.vim
+  autocmd FileType go           :source ~/.config/vim/go.vim
+  autocmd FileType html         :source ~/.config/vim/html.vim
+  autocmd FileType javascript   :source ~/.config/vim/js.vim
+  autocmd FileType json         :source ~/.config/vim/json.vim
+  autocmd FileType markdown     :source ~/.config/vim/md.vim
+  autocmd FileType php          :source ~/.config/vim/php.vim
+  autocmd FileType python       :source ~/.config/vim/python.vim
+  autocmd FileType ruby         :source ~/.config/vim/ruby.vim
+  autocmd FileType scss         :source ~/.config/vim/scss.vim
+  autocmd FileType sh           :source ~/.config/vim/sh.vim
+  autocmd FileType text         :source ~/.config/vim/txt.vim
+  autocmd FileType yaml         :source ~/.config/vim/yaml.vim
+  autocmd FileType typescript   :source ~/.config/vim/ts.vim
+  autocmd FileType xml          :source ~/.config/vim/xml.vim
 endif
 
 " Enable python syntax highlighting
