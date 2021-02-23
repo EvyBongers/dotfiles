@@ -218,7 +218,7 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym Print exec flameshot gui --path $HOME/Pictures
 
 # Autostart applications
-exec --no-startup-id xmodmap ~/.Xmodmap
-exec --no-startup-id nm-applet
-exec --no-startup-id env KEYBASE_START_UI=hideWindow XDG_CURRENT_DESKTOP=Unity run_keybase -g
 exec --no-startup-id blueman-applet
+exec --no-startup-id nm-applet
+exec --no-startup-id run_keybase -a -g
+exec --no-startup-id xmodmap ~/.Xmodmap

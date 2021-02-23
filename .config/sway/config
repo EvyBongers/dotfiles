@@ -265,8 +265,8 @@ bar {
 #
 # Autostart applications
 #
-exec --no-startup-id nm-applet --indicator
 exec --no-startup-id blueman-applet
-exec --no-startup-id run_keybase -g
+exec --no-startup-id nm-applet --indicator
+exec --no-startup-id run_keybase -a -g
 
 include /etc/sway/config.d/*
