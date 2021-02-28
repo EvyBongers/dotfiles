@@ -259,7 +259,7 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    status_command py3status --wm sway
+    swaybar_command waybar
 }
 
 #

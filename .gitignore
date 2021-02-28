@@ -6,6 +6,7 @@
 !/.config/sway/
 !/.config/terminator/
 !/.config/vim/
+!/.config/waybar/
 !/.config/yamllint/
 !/.config/zsh/
 !/.gitconfig
