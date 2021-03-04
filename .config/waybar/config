@@ -22,9 +22,10 @@
     },
     "custom/spotify": {
         "format": "  {} ",
-        "interval": 30, // Remove this if your script is endless and write in loop
         "exec": "$HOME/.config/waybar/spotify.py 2> /dev/null",
         "exec-if": "pgrep spotify",
+        "return-type": "json",
+        "interval": "30",
     },
     "custom/arch_updates": {
         "format": "{}  ",
