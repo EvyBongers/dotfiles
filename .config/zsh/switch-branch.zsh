@@ -15,7 +15,8 @@ function get_short_hostname() {
 function switch_branch() {
     local current_branch local_branch target_branch
 
-    declare -r current_branch="$(home branch --show-current)"
+    declare -r current_branch="$(home branch --show-current 2>/dev/null || 
+        home symbolic-ref --quiet HEAD |sed 's@^refs/heads/@@')"
     if [[ -z "${current_branch:-}" ]]; then
         echo "Currently in detached head" >&2
         return 1
