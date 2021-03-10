@@ -4,7 +4,7 @@
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-right": [
         "custom/spotify",
-        "custom/pacman",
+        "custom/arch_updates",
         "disk",
         "cpu",
         "memory",
@@ -26,10 +26,9 @@
         "exec": "$HOME/.config/waybar/spotify.py 2> /dev/null",
         "exec-if": "pgrep spotify",
     },
-    "custom/pacman": {
-        "format": " {}  ",
-        "interval": "3600",
-        "exec": "$HOME/.config/waybar/updates.sh 2> /dev/null",
+    "custom/arch_updates": {
+        "format": "{}  ",
+        "exec": "$HOME/.config/waybar/arch-updates.sh -w 2> /dev/null",
     },
     "disk": {
         "states": {
