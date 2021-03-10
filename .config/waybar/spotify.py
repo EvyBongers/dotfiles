@@ -20,30 +20,32 @@ def printUpdate(metadata, playbackStatus):
     artist = metadata.get("xesam:artist")[0]
     microtime = metadata.get("mpris:length")
     title = metadata.get("xesam:title")
-    print(
-        json.dumps(
-            {
-                "text": FORMAT.format(
-                    artist=artist,
-                    album=album,
-                    playback=playbackStatus,
-                    time=str(timedelta(seconds=microtime // 1_000_000)),
-                    title=title,
-                ),
-            }
-        ),
+
+    track_info = FORMAT.format(
+        artist=artist,
+        album=album,
+        playback=playbackStatus,
+        time=str(timedelta(seconds=microtime // 1_000_000)),
+        title=title,
     )
+    output = {
+        "text": track_info,
+        "class": "custom-spotify",
+        "alt": "Spotify",
+    }
+    sys.stdout.write(json.dumps(output) + "\n")
+    sys.stdout.flush()
 
 
 def main():
     bus = SessionBus()
 
-    #loop = GLib.MainLoop()
-    #def signalHandler(sig, frame):
-    #    loop.quit()
+    loop = GLib.MainLoop()
+    def signalHandler(sig, frame):
+        loop.quit()
 
-    #signal.signal(signal.SIGINT, signalHandler)
-    #signal.signal(signal.SIGTERM, signalHandler)
+    signal.signal(signal.SIGINT, signalHandler)
+    signal.signal(signal.SIGTERM, signalHandler)
 
     try:
         spotify = bus.get(DBUS_CLIENT, OBJECT_PATH)
@@ -60,10 +62,10 @@ def main():
             # TODO: find what data is available
             pass
 
-        #spotify.PropertiesChanged.connect(
-        #    lambda _s, _a, _as: printUpdate(_a["Metadata"], _a["PlaybackStatus"])
-        #)
-        #loop.run()
+        spotify.PropertiesChanged.connect(
+            lambda _s, _a, _as: printUpdate(_a["Metadata"], _a["PlaybackStatus"])
+        )
+        loop.run()
 
     except Exception:
         # Spotify isn't running
