@@ -82,6 +82,9 @@
         "device": "intel_backlight",
         "format": "{percent}% {icon}",
         "format-icons": ["", ""],
+        "on-scroll-up": "brightnessctl set +1%",
+        "on-scroll-down": "brightnessctl set 1%-",
+        "smooth-scrolling-threshold": "2.0",
     },
     "pulseaudio": {
         "format": "{volume}% {icon}",
