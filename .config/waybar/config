@@ -28,6 +28,7 @@
     "custom/arch_updates": {
         "format": "{}  ",
         "exec": "$HOME/.config/waybar/arch-updates.sh -w 2> /dev/null",
+        "interval": 300,
     },
     "disk": {
         "states": {
