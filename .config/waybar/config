@@ -24,7 +24,6 @@
         "format": " {}",
         "return-type": "json",
         "exec": "$HOME/.config/waybar/spotify.py 2> /dev/null",
-        "exec-if": "pgrep spotify",
     },
     "custom/arch_updates": {
         "format": "{}  ",

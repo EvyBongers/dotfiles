@@ -38,39 +38,43 @@ def printUpdate(metadata, playbackStatus):
 
 
 def main():
-    bus = SessionBus()
-
     loop = GLib.MainLoop()
     def signalHandler(sig, frame):
         loop.quit()
 
+    signal.signal(signal.SIGCHLD, signalHandler)
     signal.signal(signal.SIGINT, signalHandler)
     signal.signal(signal.SIGTERM, signalHandler)
 
-    try:
-        spotify = bus.get(DBUS_CLIENT, OBJECT_PATH)
-        player = spotify[PLAYER_IFACE]
-
+    bus = SessionBus()
+    spotify = None
+    while spotify == None:
         try:
-            metadata = player.Metadata
-            playbackStatus = player.PlaybackStatus
-            printUpdate(metadata, playbackStatus)
+            spotify = bus.get(DBUS_CLIENT, OBJECT_PATH)
+            player = spotify[PLAYER_IFACE]
+
+            try:
+                metadata = player.Metadata
+                playbackStatus = player.PlaybackStatus
+                printUpdate(metadata, playbackStatus)
+
+            except Exception:
+                # Playpack is stopped
+
+                # TODO: find what data is available
+                pass
+
+            spotify.PropertiesChanged.connect(
+                lambda _s, _a, _as: printUpdate(_a["Metadata"], _a["PlaybackStatus"])
+            )
 
         except Exception:
-            # Playpack is stopped
-
-            # TODO: find what data is available
+            # Spotify isn't running
+            print("Spotify isn't running!", file=sys.stderr)
+            sleep(1)
             pass
 
-        spotify.PropertiesChanged.connect(
-            lambda _s, _a, _as: printUpdate(_a["Metadata"], _a["PlaybackStatus"])
-        )
-        loop.run()
-
-    except Exception:
-        # Spotify isn't running
-        print("Spotify isn't running!", file=sys.stderr)
-        pass
+    loop.run()
 
 
 if __name__ == "__main__":
