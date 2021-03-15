@@ -40,6 +40,8 @@ function main() {
     fi
 }
 
+trap 'kill $(jobs -p)' SIGCHLD
+
 if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
     OPT_SHORT='wt:'
     OPT_LONG=('watch', 'timeout')
