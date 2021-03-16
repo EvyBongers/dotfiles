@@ -3,6 +3,7 @@
 !/.Xmodmap
 !/.config/i3/
 !/.config/i3status/
+!/.config/swappy/
 !/.config/sway/
 !/.config/terminator/
 !/.config/vim/

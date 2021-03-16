@@ -93,6 +93,10 @@ input type:keyboard {
     # Start your launcher
     bindsym $mod+d exec bemenu-run
 
+    # Make a screenshot
+    bindsym Print exec /usr/share/sway/scripts/grimshot save area - | swappy -f -
+    bindsym Mod1+Print exec /usr/share/sway/scripts/grimshot save active - |swappy -f -
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
