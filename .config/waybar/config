@@ -13,7 +13,7 @@
         "battery",
         "backlight",
         "pulseaudio",
-        "idle-inhibitor",
+        "idle_inhibitor",
         "clock",
         "tray",
     ],
