@@ -17,5 +17,5 @@ fi
 
 if command -v vim &>/dev/null; then
     # Set vimrc's location and source it on vim startup
-    export VIMINIT='let $MYVIMRC="$HOME/.config/vim/vimrc"'
+    export VIMINIT="source ${XDG_CONFIG_HOME}/vim/vimrc"
 fi
