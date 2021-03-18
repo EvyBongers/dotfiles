@@ -13,8 +13,9 @@ PAGER=less
 
 LANG="en_US.UTF-8"
 
-# set PATH so it includes user's private bin if it exists
+# include the user's private bin in PATH if it exists
 test -d "${HOME}/.local/bin" && PATH="${HOME}/.local/bin:${PATH}"
+# include Cargo bin in PATH if it exists
 test -d "${HOME}/.cargo/bin" && PATH="${HOME}/.cargo/bin:${PATH}"
 
 export EDITOR GIT_EDITOR GREP LANG PAGER PATH
