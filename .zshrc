@@ -1,17 +1,20 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH="${HOME}/.oh-my-zsh"
+# Path to your ohmyzsh installation.
+export ZSH="${HOME}/.ohmyzsh"
+if [[ ! -d "${ZSH}" && -d "${HOME}/.oh-my-zsh" ]]; then
+    mv "${HOME}/.oh-my-zsh" "${ZSH}"
+fi
 if [[ ! -d "${ZSH}" ]]; then
-  which git &>/dev/null && \
-    env git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git "${ZSH}" && \\
+  command -v git &>/dev/null && \
+    env git clone --depth=1 https://github.com/ohmyzsh/ohmyzsh.git "${ZSH}" && \\
     env git clone https://github.com/zsh-users/zsh-autosuggestions.git "${ZSH}/custom/plugins/zsh-autosuggestions"
 fi
 
 # Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# it'll load a random theme each time that ohmyzsh is loaded.
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="afowler"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -47,8 +50,8 @@ HIST_STAMPS="yyyy-mm-dd"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Which plugins would you like to load? (plugins can be found in ~/.ohmyzsh/plugins/*)
+# Custom plugins may be added to ~/.ohmyzsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
