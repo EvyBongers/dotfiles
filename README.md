@@ -67,3 +67,4 @@ The following software is configured for both window managers
 - blueman-applet (blueman)
 - nm-applet
 - keybase
+- Emote
