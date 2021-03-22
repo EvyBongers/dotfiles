@@ -59,20 +59,21 @@ def main():
                 printUpdate(metadata, playbackStatus)
 
             except Exception:
-                # Playpack is stopped
-
-                # TODO: find what data is available
-                pass
+                output = {
+                    "text": "Playback is stopped",
+                    "class": "custom-spotify",
+                    "alt": "Spotify",
+                }
+                sys.stdout.write(json.dumps(output) + "\n")
+                sys.stdout.flush()
 
             spotify.PropertiesChanged.connect(
                 lambda _s, _a, _as: printUpdate(_a["Metadata"], _a["PlaybackStatus"])
             )
 
         except Exception:
-            # Spotify isn't running
-            print("Spotify isn't running!", file=sys.stderr)
+            # Spotify isn't running, keep the loop running
             sleep(1)
-            pass
 
     loop.run()
 
