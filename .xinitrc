@@ -1,1 +1,1 @@
-/usr/bin/i3
+.config/sx/sxrc

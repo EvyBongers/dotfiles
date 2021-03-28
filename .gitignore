@@ -5,6 +5,7 @@
 !/.config/i3status/
 !/.config/swappy/
 !/.config/sway/
+!/.config/sx/
 !/.config/terminator/
 !/.config/vim/
 !/.config/waybar/
