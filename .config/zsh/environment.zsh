@@ -7,7 +7,6 @@ XDG_DATA_HOME="${HOME}/.local/share"
 
 if command -v pyenv &>/dev/null; then
     export PYENV_ROOT="${HOME}/.pyenv"
-    eval "$(pyenv init -)"
 fi
 
 if command -v go &>/dev/null; then
