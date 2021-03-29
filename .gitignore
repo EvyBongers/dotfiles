@@ -1,6 +1,7 @@
 /*
 !/README.md
 !/.Xmodmap
+!/.config/git/config
 !/.config/i3/
 !/.config/i3status/
 !/.config/swappy/
@@ -11,7 +12,6 @@
 !/.config/waybar/
 !/.config/yamllint/
 !/.config/zsh/
-!/.gitconfig
 !/.gitignore
 !/.local/share/fonts/
 !/.profile
