@@ -85,7 +85,7 @@ input type:keyboard {
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Return exec i3-sensible-terminal
+    bindsym $mod+Return exec ${HOME}/.local/bin/sensible-terminal
 
     # Kill focused window
     bindsym $mod+Shift+q kill

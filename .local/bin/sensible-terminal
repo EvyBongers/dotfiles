@@ -1,0 +1,15 @@
+#!/bin/bash
+TERMINALS=(
+    terminator
+    xterm
+)
+
+function main() {
+    for terminal in "${TERMINALS[@]}"; do
+        EXEC="$(command -v "${terminal}")" && exec "${EXEC}"
+    done
+}
+
+if [[ "${0}" == "${BASH_SOURCE[0]}" ]]; then
+    main
+fi
