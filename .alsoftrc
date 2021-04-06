@@ -1,3 +1,5 @@
+drivers = pulse,
+
 [pulse]
 # Allow PulseAudio to move active streams to different devices
 allow-moves=yes
