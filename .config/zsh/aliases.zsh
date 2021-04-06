@@ -7,6 +7,8 @@ alias hl="home pull"
 alias hlol="home log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 alias hp='home push'
 alias hpf='home push --force-with-lease'
+alias hrb='home rebase'
+alias hrbm='home rebase main'
 alias hst='home status'
 
 # Aliases for often used ls flags
