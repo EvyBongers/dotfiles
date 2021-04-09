@@ -17,9 +17,13 @@
 !/.config/yamllint/
 !/.config/zsh/
 !/.gitignore
+!/.local/bin/
+/.local/bin/*
 !/.local/bin/sensible-terminal
 !/.local/share/fonts/
 !/.profile
+!/.ssh/
+/.ssh/*
 !/.ssh/authorized_keys
 !/.ssh/config
 !/.xinitrc
