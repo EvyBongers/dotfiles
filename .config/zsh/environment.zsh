@@ -1,4 +1,5 @@
 CDPATH="${HOME}"
+[[ -d "${HOME}/git" ]] && CDPATH="${CDPATH}:${HOME}/git"
 
 XDG_CACHE_HOME="${HOME}/.cache"
 XDG_CONFIG_HOME="${HOME}/.config"
