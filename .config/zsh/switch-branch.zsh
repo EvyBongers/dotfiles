@@ -1,15 +1,12 @@
 function get_short_hostname() {
     if command -v hostnamectl &>/dev/null; then
-        hostnamectl --static
-        return
+        hostnamectl --static 2>/dev/null && return
     fi
     if command -v sysctl &>/dev/null; then
-        sysctl -n kernel.hostname
-        return
+        sysctl -n kernel.hostname 2>/dev/null && return
     fi
     if command -v hostname &>/dev/null; then
-        hostname -s
-        return
+        hostname -s 2>/dev/null && return
     fi
 }
 function switch_branch() {
