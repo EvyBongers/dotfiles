@@ -4,6 +4,7 @@
 !/.alsoftrc
 !/.config/
 /.config/*
+!/.config/chromium/NativeMessagingHosts/gpgmejson.json
 !/.config/git/config
 !/.config/gtk-3.0/
 !/.config/i3/
@@ -22,6 +23,7 @@
 /.local/bin/*
 !/.local/bin/sensible-terminal
 !/.local/share/fonts/
+!/.mozilla/native-messaging-hosts/gpgmejson.json
 !/.profile
 !/.ssh/
 /.ssh/*
