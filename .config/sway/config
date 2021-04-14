@@ -25,6 +25,15 @@ set $ws10 "10"
 # is used in the bar {} block below.
 font pango:Fantasque Sans Mono 10
 
+# Set GTK theme
+set $gnome-schema org.gnome.desktop.interface
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'Ark-Dark'
+    gsettings set $gnome-schema icon-theme 'Arc'
+    gsettings set $gnome-schema cursor-theme 'Adwaita'
+    gsettings set $gnome-schema font-name 'Dejavu Sans Book 11'
+}
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
