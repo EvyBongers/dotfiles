@@ -100,7 +100,7 @@ input type:keyboard {
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec bemenu-run
+    bindsym $mod+d exec wofi --show=drun
 
     # Configure manual screen locking
     bindsym control+Mod1+E exec emote
