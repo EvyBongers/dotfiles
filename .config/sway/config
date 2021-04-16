@@ -99,8 +99,9 @@ input type:keyboard {
     # Kill focused window
     bindsym $mod+Shift+q kill
 
-    # Start your launcher
+    # Start the launcher
     bindsym $mod+d exec wofi --show=drun
+    bindsym $mod+Shift+r exec wofi --show=run
 
     # Configure manual screen locking
     bindsym control+Mod1+E exec emote
