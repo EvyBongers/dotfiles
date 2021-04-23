@@ -19,3 +19,6 @@ test -d "${HOME}/.local/bin" && PATH="${HOME}/.local/bin:${PATH}"
 test -d "${HOME}/.cargo/bin" && PATH="${HOME}/.cargo/bin:${PATH}"
 
 export EDITOR GIT_EDITOR GREP LANG PAGER PATH
+
+# Force Firefox on X11 to use D-Bus remote protocol
+export MOZ_DBUS_REMOTE=1
