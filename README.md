@@ -48,16 +48,16 @@ be installed as well.
 
 | **i3**        | **sway**             |
 | ------------- | -------------------- |
-| - dmenu       | - bemenu             |
+| - dmenu       | - wofi               |
 | - py3status   | - waybar             |
 | - xsecurelock | - swaylock           |
 | - xss-lock    | - loginctl (systemd) |
-| - xset        |
+| - xset        |                      |
 | - flameshot   | - grim               |
 |               | - jq                 |
 |               | - slurp              |
 |               | - swappy             |
-| - xmodmap     |
+| - xmodmap     |                      |
 
 The following software is configured for both window managers
 
