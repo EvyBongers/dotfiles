@@ -55,6 +55,8 @@ if has("autocmd")
   autocmd BufNewFile,BufRead *.py,*.pyw,*.c,*.h match TrailWhitespace /\s\+$/
   autocmd BufNewFile,BufRead *.py,*.pyw,*.c,*.h match UnwantedTab /\t/
 
+  autocmd BufRead,BufNewFile *.hcl set filetype=terraform
+
   autocmd FileType bzl          :source ~/.config/vim/bzl.vim
   autocmd FileType c            :source ~/.config/vim/c.vim
   autocmd FileType cpp          :source ~/.config/vim/cpp.vim
@@ -69,10 +71,13 @@ if has("autocmd")
   autocmd FileType ruby         :source ~/.config/vim/ruby.vim
   autocmd FileType scss         :source ~/.config/vim/scss.vim
   autocmd FileType sh           :source ~/.config/vim/sh.vim
+  autocmd FileType terraform    :source ~/.config/vim/tf.vim
   autocmd FileType text         :source ~/.config/vim/txt.vim
   autocmd FileType typescript   :source ~/.config/vim/ts.vim
   autocmd FileType xml          :source ~/.config/vim/xml.vim
   autocmd FileType yaml         :source ~/.config/vim/yaml.vim
+
+  nnoremap <buffer> <silent> <LocalLeader>= :ALEFix<CR>
 endif
 
 " If the terminal supports colors or vim is started in gui, switch syntax
