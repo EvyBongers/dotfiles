@@ -8,5 +8,5 @@
 	path = .config/vim/pack/plugins/start/vim-yaml-folds
 	url = https://github.com/pedrohdz/vim-yaml-folds.git
 [submodule "/home/ebongers/.config/vim/pack/plugins/start/vim-terraform"]
-	path = /home/ebongers/.config/vim/pack/plugins/start/vim-terraform
+	path = .config/vim/pack/plugins/start/vim-terraform
 	url = https://github.com/hashivim/vim-terraform.git
