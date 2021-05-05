@@ -103,9 +103,6 @@ input type:keyboard {
     bindsym $mod+d exec wofi --show=drun
     bindsym $mod+Shift+r exec wofi --show=run
 
-    # Configure manual screen locking
-    bindsym control+Mod1+E exec emote
-
     # Make a screenshot
     bindsym Print exec /usr/share/sway/scripts/grimshot save area - | swappy -f -
     bindsym Mod1+Print exec /usr/share/sway/scripts/grimshot save active - |swappy -f -
