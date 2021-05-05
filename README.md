@@ -58,6 +58,7 @@ be installed as well.
 |               | - slurp              |
 |               | - swappy             |
 | - xmodmap     |                      |
+|               | - wlogout            |
 
 The following software is configured for both window managers
 
