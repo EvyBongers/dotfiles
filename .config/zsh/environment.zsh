@@ -1,11 +1,7 @@
 CDPATH="${HOME}"
 [[ -d "${HOME}/git" ]] && CDPATH="${CDPATH}:${HOME}/git"
 
-XDG_CACHE_HOME="${HOME}/.cache"
-XDG_CONFIG_HOME="${HOME}/.config"
-XDG_DATA_HOME="${HOME}/.local/share"
-
-export CDPATH XDG_CACHE_HOME XDG_CONFIG_HOME XDG_DATA_HOME
+export CDPATH
 
 if command -v pyenv &>/dev/null; then
     export PYENV_ROOT="${HOME}/.pyenv"
