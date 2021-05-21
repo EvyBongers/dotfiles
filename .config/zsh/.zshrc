@@ -75,8 +75,8 @@ fi
 # User configuration
 
 # Source additional zsh files
-if [[ -d "${HOME}/.config/zsh" ]]; then
-    for file in $(find -L "${HOME}/.config/zsh" -type f -name '*.zsh' |sort); do
+if [[ -d "${XDG_CONFIG_HOME}/zsh" ]]; then
+    for file in $(find -L "${XDG_CONFIG_HOME}/zsh" -type f -name '*.zsh' |sort); do
         test -r "${file}" && source "${file}"
     done
 fi
