@@ -1,0 +1,23 @@
+alias tfswitch="tfswitch -b ~/.local/bin/terraform"
+
+# Provided by ohmyzsh terraform plugin, but added for sake of completeness
+alias tf="terraform"
+
+alias tfa="terraform apply"
+alias tfd="terraform destroy"
+alias tfi="terraform init"
+alias tfiu="terraform init -upgrade"
+alias tfo="terraform output"
+alias tfp="terraform plan"
+alias tfs="terraform state"
+alias tfsd="terraform state rm"
+alias tfsh="terraform state show"
+alias tfsl="terraform state list"
+alias tfsm="terraform state mv"
+alias tfv="terraform validate"
+alias tfw="terraform workspace"
+alias tfwd="terraform workspace delete"
+alias tfwl="terraform workspace list"
+alias tfwn="terraform workspace new"
+alias tfws="terraform workspace select"
+alias tfwsh="terraform workspace show"
