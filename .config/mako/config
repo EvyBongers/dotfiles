@@ -1,0 +1,9 @@
+anchor=top-center
+default-timeout=5000
+group-by=app-name
+
+[app-name=batsignal]
+anchor=center
+default-timeout=0
+width=700
+height=200
