@@ -4,6 +4,6 @@ group-by=app-name
 
 [app-name=batsignal]
 anchor=center
+background-color=#f01c1c
+border-color=#b72b2b
 default-timeout=0
-width=700
-height=200
