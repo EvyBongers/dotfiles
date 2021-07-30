@@ -1,6 +1,6 @@
 # This is Git's per-user configuration file.
 [alias]
-	lg = log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	root = rev-parse --show-toplevel
 [init]
 	defaultBranch = main
 [pull]
