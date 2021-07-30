@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-from datetime import timedelta
-from time import sleep
-import typing
-from gi.repository import GLib
+import json
 import signal
 import sys
-import json
+import typing
+from datetime import timedelta
+from time import sleep
 
+from gi.repository import GLib
 from pydbus import SessionBus
 
 FORMAT: typing.Final[str] = "{title} - {artist} [{time}]"
@@ -21,7 +21,7 @@ def printUpdate(metadata, playbackStatus):
     microtime = metadata.get("mpris:length")
     title = metadata.get("xesam:title")
 
-    track_info = FORMAT.format(
+    trackInfo = FORMAT.format(
         artist=artist,
         album=album,
         playback=playbackStatus,
@@ -29,8 +29,8 @@ def printUpdate(metadata, playbackStatus):
         title=title,
     )
     output = {
-        "text": track_info,
-        "class": "custom-spotify",
+        "text": trackInfo,
+        "class": playbackStatus.lower(),
         "alt": "Spotify",
     }
     sys.stdout.write(json.dumps(output) + "\n")
@@ -39,6 +39,7 @@ def printUpdate(metadata, playbackStatus):
 
 def main():
     loop = GLib.MainLoop()
+
     def signalHandler(sig, frame):
         loop.quit()
 
