@@ -10,10 +10,10 @@ set
 
 let b:ale_linters = ['flake8']
 let b:ale_fixers = [
+      \   'black',
+      \   'isort',
       \   'remove_trailing_lines',
       \   'trim_whitespace',
-      \   'isort',
-      \   'yapf',
       \]
 let g:ale_fix_on_save = 1
 
