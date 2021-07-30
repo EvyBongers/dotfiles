@@ -5,7 +5,11 @@
 !/.alsoftrc
 !/.config/
 /.config/*
+!/.config/chromium-flags.conf
 !/.config/chromium/NativeMessagingHosts/gpgmejson.json
+!/.config/fontconfig/
+!/.config/git/
+/.config/git/*
 !/.config/git/config
 !/.config/gtk-3.0/
 !/.config/i3/
@@ -21,6 +25,8 @@
 !/.config/yamllint/
 !/.config/zsh/
 !/.gitignore
+!/.local/
+/.local/*
 !/.local/bin/
 /.local/bin/*
 !/.local/bin/sensible-terminal
