@@ -29,6 +29,9 @@
 /.local/*
 !/.local/bin/
 /.local/bin/*
+!/.local/share/
+/.local/share/*
+!/.local/share/fonts
 !/.local/bin/sensible-terminal
 !/.local/share/fonts/
 !/.mozilla/native-messaging-hosts/gpgmejson.json
