@@ -12,6 +12,7 @@ export EDITOR GIT_EDITOR GREP PAGER
 XDG_CACHE_HOME="${HOME}/.cache"
 XDG_CONFIG_HOME="${HOME}/.config"
 XDG_DATA_HOME="${HOME}/.local/share"
+XDG_STATE_HOME="${HOME}/.local/state"
 export XDG_CACHE_HOME XDG_CONFIG_HOME XDG_DATA_HOME
 
 PATH="${HOME}/.local/bin:${PATH}"
