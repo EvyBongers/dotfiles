@@ -9,7 +9,7 @@ function get_short_hostname() {
         hostname -s 2>/dev/null && return
     fi
 }
-function switch_branch() {
+function hsw() {
     local current_branch local_branch target_branch
 
     declare -r current_branch="$(home branch --show-current 2>/dev/null || 
@@ -35,5 +35,5 @@ function switch_branch() {
     fi
 
     echo "switching to branch '${target_branch}'"
-    home checkout "${target_branch}"
+    home switch "${target_branch}"
 }
