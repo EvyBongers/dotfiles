@@ -255,15 +255,19 @@ bindsym $mod+r mode "resize"
 #
 # Media keys
 #
+    # Set up overlay bar
+    set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
+    exec mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
+
     # Pulse Audio controls
-    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-    bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% && pamixer --get-volume > $WOBSOCK
+    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% && pamixer --get-volume > $WOBSOCK
+    bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle && ( pamixer --get-mute && echo 0 > $WOBSOCK ) || pamixer --get-volume > $WOBSOCK
     bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
     # Sreen brightness controls
-    bindsym XF86MonBrightnessUp exec brightnessctl set +5%
-    bindsym XF86MonBrightnessDown exec brightnessctl set -5%
+    bindsym XF86MonBrightnessUp exec brightnessctl set +5% | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
+    bindsym XF86MonBrightnessDown exec brightnessctl set 5%- | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
 
     # Media player controls
     bindsym --locked XF86AudioPlay exec playerctl play-pause
@@ -282,6 +286,7 @@ bar {
 #
 # Autostart applications
 #
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec blueman-applet
 exec batsignal -b
 exec nm-applet --indicator
