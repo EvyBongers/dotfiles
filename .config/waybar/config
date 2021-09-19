@@ -48,7 +48,7 @@
              "critical": 15,
         },
         "interval": 10,
-        "format": "{}% ",
+        "format": "{} ",
         "max-length": 10,
     },
     "custom/arch_updates": {
