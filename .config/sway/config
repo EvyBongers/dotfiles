@@ -289,6 +289,6 @@ exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec blueman-applet
 exec batsignal -b
 exec nm-applet --indicator
-exec run_keybase -a -g
+exec run_keybase -a
 
 include /etc/sway/config.d/*
