@@ -7,7 +7,3 @@ GIT_EDITOR=${EDITOR}
 GREP=grep
 PAGER=less
 export EDITOR GIT_EDITOR GREP PAGER
-
-PATH="${HOME}/.local/bin:${PATH}"
-test -d "${HOME}/.cargo/bin" && PATH="${HOME}/.cargo/bin:${PATH}"
-export PATH
