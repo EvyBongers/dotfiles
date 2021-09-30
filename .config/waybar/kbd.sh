@@ -1,5 +1,8 @@
 #!/bin/bash
 
+IDENTIFIER="${1:-}"
+
 swaymsg -t get_inputs | jq --raw-output \
-     --arg identifier "${1}" \
-    '.[] | select(.type=="keyboard" and .identifier==$identifier) | .xkb_active_layout_name'
+     --arg type "keyboard" \
+     --arg identifier "${IDENTIFIER}" \
+    'map(select(contains($ARGS.named)) | .xkb_active_layout_name) | unique[]'
