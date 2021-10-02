@@ -1,11 +1,3 @@
-if [[ ! -d "${ZSH}" && -d "${HOME}/.ohmyzsh" ]]; then
-    mv "${HOME}/.ohmyzsh" "${ZSH}"
-fi
-if [[ ! -d "${ZSH}" ]]; then
-  command -v git &>/dev/null &&
-    git clone --depth=1 https://github.com/ohmyzsh/ohmyzsh.git "${ZSH}"
-fi
-
 if command -v gbt &>/dev/null; then
     PROMPT='$(gbt $?)'
 
