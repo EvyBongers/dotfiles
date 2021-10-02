@@ -5,3 +5,12 @@ if [[ ! -d "${ZSH}" ]]; then
   command -v git &>/dev/null &&
     git clone --depth=1 https://github.com/ohmyzsh/ohmyzsh.git "${ZSH}"
 fi
+
+if command -v gbt &>/dev/null; then
+    PROMPT='$(gbt $?)'
+
+    export GBT_CARS='Status, Os, Hostname, Dir, Kubectl, Git, PyVirtEnv, Sign'
+
+    # Tell python virtualenv to leave the prompt alone
+    export VIRTUAL_ENV_DISABLE_PROMPT='1'
+fi
