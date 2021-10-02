@@ -7,11 +7,6 @@ HIST_STAMPS="yyyy-mm-dd"
 ZSH_CUSTOM="${XDG_DATA_HOME}/omz-custom"
 ZSH_COMPDUMP="${XDG_CACHE_HOME}/zsh/zcompdump-${HOST/.*/}-${ZSH_VERSION}"
 
-if [[ ! -d "${ZSH_CUSTOM}" ]]; then
-  command -v git &>/dev/null &&
-    git clone https://github.com/zsh-users/zsh-autosuggestions.git "${ZSH}/custom/plugins/zsh-autosuggestions"
-fi
-
 plugins=(
   dotenv
   git
