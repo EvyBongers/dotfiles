@@ -10,3 +10,9 @@
 [submodule "/home/ebongers/.config/vim/pack/plugins/start/vim-terraform"]
 	path = .config/vim/pack/plugins/start/vim-terraform
 	url = https://github.com/hashivim/vim-terraform.git
+[submodule "/home/ebongers/.local/share/omz-custom/plugins/zsh-autosuggestions"]
+	path = /home/ebongers/.local/share/omz-custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "/home/ebongers/.local/share/ohmyzsh"]
+	path = /home/ebongers/.local/share/ohmyzsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git

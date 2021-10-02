@@ -34,6 +34,8 @@
 !/.local/share/fonts
 !/.local/bin/sensible-terminal
 !/.local/share/fonts/
+!/.local/share/omz-custom/
+!/.local/share/ohmyzsh
 !/.mozilla/native-messaging-hosts/gpgmejson.json
 !/.profile
 !/.ssh/
