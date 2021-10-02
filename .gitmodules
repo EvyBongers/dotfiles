@@ -1,18 +1,18 @@
-[submodule ".vim/pack/plugins/start/vim-airline"]
-	path = .config/vim/pack/plugins/start/vim-airline
-	url = https://github.com/vim-airline/vim-airline.git
-[submodule ".vim/pack/plugins/start/ale"]
+[submodule ".local/share/ohmyzsh"]
+	path = .local/share/ohmyzsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
+[submodule ".local/share/omz-custom/plugins/zsh-autosuggestions"]
+	path = .local/share/omz-custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule ".config/vim/pack/plugins/start/ale"]
 	path = .config/vim/pack/plugins/start/ale
 	url = https://github.com/w0rp/ale.git
+[submodule ".config/vim/pack/plugins/start/vim-airline"]
+	path = .config/vim/pack/plugins/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule ".config/vim/pack/plugins/start/vim-terraform"]
+	path = .config/vim/pack/plugins/start/vim-terraform
+	url = https://github.com/hashivim/vim-terraform.git
 [submodule ".config/vim/pack/plugins/start/vim-yaml-folds"]
 	path = .config/vim/pack/plugins/start/vim-yaml-folds
 	url = https://github.com/pedrohdz/vim-yaml-folds.git
-[submodule "/home/ebongers/.config/vim/pack/plugins/start/vim-terraform"]
-	path = .config/vim/pack/plugins/start/vim-terraform
-	url = https://github.com/hashivim/vim-terraform.git
-[submodule "/home/ebongers/.local/share/omz-custom/plugins/zsh-autosuggestions"]
-	path = /home/ebongers/.local/share/omz-custom/plugins/zsh-autosuggestions
-	url = https://github.com/zsh-users/zsh-autosuggestions.git
-[submodule "/home/ebongers/.local/share/ohmyzsh"]
-	path = /home/ebongers/.local/share/ohmyzsh
-	url = https://github.com/ohmyzsh/ohmyzsh.git
