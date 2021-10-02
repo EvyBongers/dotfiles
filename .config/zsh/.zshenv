@@ -1,4 +1,4 @@
-export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
+export ZDOTDIR="${XDG_CONFIG_HOME=${HOME}/.config}/zsh"
 
 function chkbin() { command -v "${1}" &>/dev/null }
 chkbin pyenv && { export PYENV_ROOT="${HOME}/.pyenv"; PATH="${PYENV_ROOT}/bin:${PATH}" }
