@@ -5,4 +5,6 @@ if command -v gbt &>/dev/null; then
 
     # Tell python virtualenv to leave the prompt alone
     export VIRTUAL_ENV_DISABLE_PROMPT='1'
+else
+    ZSH_THEME="afowler"
 fi

@@ -1,6 +1,5 @@
 export ZSH="${XDG_DATA_HOME}/ohmyzsh"
 
-ZSH_THEME="afowler"
 CASE_SENSITIVE="true"
 DISABLE_AUTO_UPDATE="true"
 HIST_STAMPS="yyyy-mm-dd"
