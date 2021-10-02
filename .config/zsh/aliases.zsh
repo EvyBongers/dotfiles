@@ -18,6 +18,7 @@ alias hrbm='home rebase main'
 alias hrs='home restore'
 alias hsh='home show'
 alias hst='home status'
+alias hsw='home_switch'
 
 # Aliases for often used ls flags
 alias l="/bin/ls -AF --group-directories-first --color=auto"

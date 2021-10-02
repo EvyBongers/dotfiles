@@ -18,7 +18,7 @@ function home_current_branch() {
         eval "${cmd}" 2>/dev/null && return
     done
 }
-function hsw() {
+function home_switch() {
     local current_branch local_branch target_branch
 
     declare -r current_branch="$(home_current_branch)"
