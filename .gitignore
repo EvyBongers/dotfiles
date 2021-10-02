@@ -1,7 +1,6 @@
 /*
 !/LICENSE
 !/README.md
-!/.Xmodmap
 !/.alsoftrc
 !/.config/
 /.config/*
@@ -12,12 +11,9 @@
 /.config/git/*
 !/.config/git/config
 !/.config/gtk-3.0/
-!/.config/i3/
-!/.config/i3status/
 !/.config/mako/
 !/.config/swappy/
 !/.config/sway/
-!/.config/sx/
 !/.config/terminator/
 !/.config/vim/
 /.config/vim/.netrwhist
@@ -29,10 +25,9 @@
 /.local/*
 !/.local/bin/
 /.local/bin/*
+!/.local/bin/sensible-terminal
 !/.local/share/
 /.local/share/*
-!/.local/share/fonts
-!/.local/bin/sensible-terminal
 !/.local/share/fonts/
 !/.local/share/omz-custom/
 !/.local/share/ohmyzsh
@@ -42,7 +37,4 @@
 /.ssh/*
 !/.ssh/authorized_keys
 !/.ssh/config
-!/.xinitrc
-!/.xprofile
-!/.zprofile
 !/.zshenv
