@@ -6,9 +6,7 @@ if [[ -d "${XDG_CONFIG_HOME}/zsh/init" ]]; then
 fi
 
 # Load OhMyZSH
-if [[ -f "${ZSH}/oh-my-zsh.sh" ]]; then
-    source "${ZSH}/oh-my-zsh.sh"
-fi
+[[ -f "${ZSH}/oh-my-zsh.sh" ]] && source "${ZSH}/oh-my-zsh.sh"
 
 # Source additional zsh files
 if [[ -d "${XDG_CONFIG_HOME}/zsh" ]]; then

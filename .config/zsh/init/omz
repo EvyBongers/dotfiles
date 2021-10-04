@@ -1,4 +1,6 @@
 export ZSH="${XDG_DATA_HOME}/ohmyzsh"
+[[ -f "${ZSH}/oh-my-zsh.sh" ]] ||
+    git --work-tree=${HOME} --git-dir=${HOME}/.files.git submodule update --init
 
 CASE_SENSITIVE="true"
 DISABLE_AUTO_UPDATE="true"
