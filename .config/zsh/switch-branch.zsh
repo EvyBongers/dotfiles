@@ -37,6 +37,7 @@ function home_switch() {
     fi
 
     echo "switching to branch '${target_branch}'"
-    home switch "${target_branch}" 2>/dev/null ||
-        home switch -c "${target_branch}"
+    home show-ref --quiet "refs/heads/${target_branch}" ||
+        home branch "${target_branch}"
+    home switch "${target_branch}"
 }
