@@ -15,9 +15,8 @@ XDG_DATA_HOME="${HOME}/.local/share"
 XDG_STATE_HOME="${HOME}/.local/state"
 export XDG_CACHE_HOME XDG_CONFIG_HOME XDG_DATA_HOME XDG_STATE_HOME
 
-GOROOT="${HOME}/go"
-GOBIN="${GOROOT}/bin"
-export GOROOT GOBIN
+GOPATH="${HOME}/go"
+export GOPATH
 
 PATH="${HOME}/.local/bin:${PATH}"
 PATH="${HOME}/.go/bin:${PATH}"
