@@ -29,4 +29,5 @@ export CDPATH
 
 # Force Firefox on X11 to use D-Bus remote protocol
 # Needed for opening urls from programs running under xwayland
+export MOZ_ENABLE_WAYLAND=1
 export MOZ_DBUS_REMOTE=1
