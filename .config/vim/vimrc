@@ -57,25 +57,25 @@ if has("autocmd")
 
   autocmd BufRead,BufNewFile *.hcl set filetype=terraform
 
-  autocmd FileType bzl          :source ~/.config/vim/bzl.vim
-  autocmd FileType c            :source ~/.config/vim/c.vim
-  autocmd FileType cpp          :source ~/.config/vim/cpp.vim
-  autocmd FileType css          :source ~/.config/vim/css.vim
-  autocmd FileType go           :source ~/.config/vim/go.vim
-  autocmd FileType html         :source ~/.config/vim/html.vim
-  autocmd FileType javascript   :source ~/.config/vim/js.vim
-  autocmd FileType json         :source ~/.config/vim/json.vim
-  autocmd FileType markdown     :source ~/.config/vim/md.vim
-  autocmd FileType php          :source ~/.config/vim/php.vim
-  autocmd FileType python       :source ~/.config/vim/python.vim
-  autocmd FileType ruby         :source ~/.config/vim/ruby.vim
-  autocmd FileType scss         :source ~/.config/vim/scss.vim
-  autocmd FileType sh           :source ~/.config/vim/sh.vim
-  autocmd FileType terraform    :source ~/.config/vim/tf.vim
-  autocmd FileType text         :source ~/.config/vim/txt.vim
-  autocmd FileType typescript   :source ~/.config/vim/ts.vim
-  autocmd FileType xml          :source ~/.config/vim/xml.vim
-  autocmd FileType yaml         :source ~/.config/vim/yaml.vim
+  autocmd FileType bzl          :runtime bzl.vim
+  autocmd FileType c            :runtime c.vim
+  autocmd FileType cpp          :runtime cpp.vim
+  autocmd FileType css          :runtime css.vim
+  autocmd FileType go           :runtime go.vim
+  autocmd FileType html         :runtime html.vim
+  autocmd FileType javascript   :runtime js.vim
+  autocmd FileType json         :runtime json.vim
+  autocmd FileType markdown     :runtime md.vim
+  autocmd FileType php          :runtime php.vim
+  autocmd FileType python       :runtime python.vim
+  autocmd FileType ruby         :runtime ruby.vim
+  autocmd FileType scss         :runtime scss.vim
+  autocmd FileType sh           :runtime sh.vim
+  autocmd FileType terraform    :runtime tf.vim
+  autocmd FileType text         :runtime txt.vim
+  autocmd FileType typescript   :runtime ts.vim
+  autocmd FileType xml          :runtime xml.vim
+  autocmd FileType yaml         :runtime yaml.vim
 
   nnoremap <buffer> <silent> <LocalLeader>= :ALEFix<CR>
 endif
