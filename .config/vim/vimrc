@@ -4,6 +4,8 @@ endif
 
 " Make vim respect XDG directories
 :source ~/.config/vim/xdg.vim
+" Shortcut to remap colemak to qwerty based keybindings
+nnoremap <silent> gm :runtime colemak-remap.vim<CR>
 
 filetype off
 filetype plugin indent on
