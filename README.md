@@ -55,7 +55,7 @@ be installed as well.
 - blueman-applet (bluetooth status icon)
 - nm-applet (network status icon)
 - grim (screenshot utility)
-  -- jq (filter visible windows)
-  -- slurp (select region)
-  -- swappy (screenshot editor)
+  - jq (filter visible windows)
+  - slurp (select region)
+  - swappy (screenshot editor)
 - keybase
