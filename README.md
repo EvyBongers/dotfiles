@@ -19,7 +19,7 @@ not installed.
 
 **gbt**
 
-- In order for UTF-8 characters to render, DejaVuSansMono Nerd font is required
+- In order for UTF-8 characters to render, Nerd fonts are required
   (See https://github.com/jtyr/gbt#fonts-and-colors for more information)
 
 _Required software for graphical environments listed below_
@@ -27,7 +27,8 @@ _Required software for graphical environments listed below_
 ## Installation
 
 ```bash
-alias home="git --work-tree=${HOME} --git-dir=${HOME}/.files.git";
+alias home="git --work-tree=${HOME} --git-dir=${HOME}/.files.git"
+
 home init && \
 home remote add origin https://github.com/EvyBongers/dotfiles.git && \
 home fetch && \
@@ -40,31 +41,21 @@ home remote set-url --push origin git@github.com:EvyBongers/dotfiles.git
 
 ## Graphical environments
 
-_I recently switched from X11/i3 to Wayland/Sway. Configuration for i3wm will
-probably be around for some time, but won't see many updates._
-
 To make use of the window manager features, some additional software needs to
 be installed as well.
 
-| **i3**        | **sway**             |
-| ------------- | -------------------- |
-| - dmenu       | - wofi               |
-| - py3status   | - waybar             |
-| - xsecurelock | - swaylock           |
-| - xss-lock    | - loginctl (systemd) |
-| - xset        |                      |
-| - flameshot   | - grim               |
-|               | - jq                 |
-|               | - slurp              |
-|               | - swappy             |
-| - xmodmap     |                      |
-|               | - wlogout            |
-
-The following software is configured for both window managers
-
-- pactl (PulseAudio/libpulse)
-- brightnessctl
-- playerctl
-- blueman-applet (blueman)
-- nm-applet
+- sway (SwayWM)
+- waybar (status bar)
+- swaylock (lock screen)
+- wlogout (shutdown/restart helper)
+- wofi (launcher)
+- pactl (PulseAudio; audio controls)
+- brightnessctl (screen brightness control)
+- playerctl (media controls)
+- blueman-applet (bluetooth status icon)
+- nm-applet (network status icon)
+- grim (screenshot utility)
+  -- jq (filter visible windows)
+  -- slurp (select region)
+  -- swappy (screenshot editor)
 - keybase
