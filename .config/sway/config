@@ -99,11 +99,11 @@ input type:keyboard {
     bindsym $mod+Return exec ${HOME}/.local/bin/sensible-terminal
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym --to-code $mod+Shift+q kill
 
     # Start the launcher
-    bindsym $mod+d exec wofi --show=drun
-    bindsym $mod+Shift+r exec wofi --show=run
+    bindsym --to-code $mod+d exec wofi --show=drun
+    bindsym --to-code $mod+Shift+r exec wofi --show=run
 
     # Make a screenshot
     bindsym Print exec /usr/share/sway/scripts/grimshot save area - | swappy -f -
@@ -117,18 +117,18 @@ input type:keyboard {
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym $mod+Shift+c reload
+    bindsym --to-code $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec wlogout
+    bindsym --to-code $mod+Shift+e exec wlogout
 #
 # Moving around:
 #
     # Move your focus around
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
+    bindsym --to-code $mod+$left focus left
+    bindsym --to-code $mod+$down focus down
+    bindsym --to-code $mod+$up focus up
+    bindsym --to-code $mod+$right focus right
     # Or use $mod+[up|down|left|right]
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down
@@ -136,10 +136,10 @@ input type:keyboard {
     bindsym $mod+Right focus right
 
     # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
+    bindsym --to-code $mod+Shift+$left move left
+    bindsym --to-code $mod+Shift+$down move down
+    bindsym --to-code $mod+Shift+$up move up
+    bindsym --to-code $mod+Shift+$right move right
     # Ditto, with arrow keys
     bindsym $mod+Shift+Left move left
     bindsym $mod+Shift+Down move down
@@ -149,7 +149,7 @@ input type:keyboard {
 # Screenlocker
 #
     # Configure manual screen locking
-    bindsym control+Mod1+L exec loginctl lock-session
+    bindsym --to-code control+Mod1+L exec loginctl lock-session
 #
 # Workspaces:
 #
@@ -176,10 +176,10 @@ input type:keyboard {
     bindsym $mod+Shift+9 move container to workspace $ws9
     bindsym $mod+Shift+0 move container to workspace $ws10
     # Move focused workspace between monitors
-    bindsym $mod+Ctrl+$left move workspace to output left
-    bindsym $mod+Ctrl+$down move workspace to output down
-    bindsym $mod+Ctrl+$up move workspace to output up
-    bindsym $mod+Ctrl+$right move workspace to output right
+    bindsym --to-code $mod+Ctrl+$left move workspace to output left
+    bindsym --to-code $mod+Ctrl+$down move workspace to output down
+    bindsym --to-code $mod+Ctrl+$up move workspace to output up
+    bindsym --to-code $mod+Ctrl+$right move workspace to output right
     # Alternatively, one can use the cursor keys
     bindsym $mod+Ctrl+Left move workspace to output left
     bindsym $mod+Ctrl+Down move workspace to output down
@@ -189,16 +189,16 @@ input type:keyboard {
 # Layout stuff:
 #
     # split in horizontal and virtical orientation respectively
-    bindsym $mod+h splith
-    bindsym $mod+v splitv
+    bindsym --to-code $mod+h splith
+    bindsym --to-code $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    bindsym --to-code $mod+s layout stacking
+    bindsym --to-code $mod+w layout tabbed
+    bindsym --to-code $mod+e layout toggle split
 
     # Make the current focus fullscreen
-    bindsym $mod+f fullscreen toggle
+    bindsym --to-code $mod+f fullscreen toggle
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+space floating toggle
@@ -207,10 +207,10 @@ input type:keyboard {
     bindsym $mod+space focus mode_toggle
 
     # Move focus to the parent container
-    bindsym $mod+a focus parent
+    bindsym --to-code $mod+a focus parent
 
     # focus the child container
-    #bindsym $mod+d focus child
+    #bindsym --to-code $mod+d focus child
 
 
 
@@ -234,10 +234,10 @@ mode "resize" {
     # right will grow the container's width
     # up will shrink the container's height
     # down will grow the container's height
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
+    bindsym --to-code $left resize shrink width 10px
+    bindsym --to-code $down resize grow height 10px
+    bindsym --to-code $up resize shrink height 10px
+    bindsym --to-code $right resize grow width 10px
 
     # Ditto, with arrow keys
     bindsym Left resize shrink width 10px
@@ -248,9 +248,9 @@ mode "resize" {
     # Return to default mode
     bindsym Return mode "default"
     bindsym Escape mode "default"
-    bindsym $mod+r mode "default"
+    bindsym --to-code $mod+r mode "default"
 }
-bindsym $mod+r mode "resize"
+bindsym --to-code $mod+r mode "resize"
 #
 # Media keys
 #
