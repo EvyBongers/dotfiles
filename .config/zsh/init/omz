@@ -10,6 +10,7 @@ ZSH_COMPDUMP="${XDG_CACHE_HOME}/zsh/zcompdump-${HOST/.*/}-${ZSH_VERSION}"
 
 plugins=(
   dotenv
+  gh
   git
   gpg-agent
   ssh-agent
