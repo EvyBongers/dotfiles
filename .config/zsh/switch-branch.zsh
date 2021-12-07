@@ -1,14 +1,3 @@
-function home_local_branch() {
-    declare -a cmds=(
-        "hostnamectl --static"
-        "sysctl -n kernel.hostname"
-        "hostname -s"
-    )
-    for cmd in "${cmds[@]}"; do
-        command -v "${cmd%% *}" &>/dev/null || continue
-        eval "${cmd}" 2>/dev/null && return
-    done
-}
 function home_current_branch() {
     declare -a cmds=(
         "home branch --show-current"
@@ -22,7 +11,7 @@ function home_switch() {
     local current_branch local_branch target_branch
 
     declare -r current_branch="$(home_current_branch)"
-    declare -r local_branch="${1:-$(home_local_branch)}"
+    declare -r local_branch="${1:-$SHORT_HOST}"
 
     if [[ -z "${current_branch:-}" ]]; then
         echo "Currently in detached head" >&2
