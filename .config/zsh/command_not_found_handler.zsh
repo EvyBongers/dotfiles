@@ -17,7 +17,7 @@ function test_ssh_host(){
     local pattern
 
     pattern="$1"
-    if grep -Eq "^Host\\s+(\\w+\\*?\\s+)*\\b${pattern}\\b" ~/.ssh/config 2>/dev/null; then
+    if grep -Eq "^Host\\s+(\\w+\\*?\\s+)*\\b${pattern}\\b" "${XDG_CONFIG_HOME}/ssh/config" 2>/dev/null; then
         # Pattern found in ssh_config(5) config file
         return 0
     elif lookup_host "${pattern}" &>/dev/null; then

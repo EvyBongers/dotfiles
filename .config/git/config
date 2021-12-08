@@ -1,6 +1,8 @@
 # This is Git's per-user configuration file.
 [alias]
 	root = rev-parse --show-toplevel
+[core]
+	sshCommand = ssh -F ${XDG_CONFIG_HOME}/ssh/config
 [init]
 	defaultBranch = main
 [pull]

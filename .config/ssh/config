@@ -1,13 +1,17 @@
 Host                    github.com gitlab.com git.sr.ht
     User                git
-    IdentityFile        ~/.ssh/ed25519_git
+    IdentityFile        ${XDG_DATA_HOME}/ssh/ed25519_git
 
 Host                    *
     User                ebongers
     ControlMaster       auto
-    ControlPath         ~/.ssh/cm_sockets/%r@%h:%p.ctl
+    ControlPath         ${XDG_RUNTIME_DIR}/%r@%h:%p.ctl
     EscapeChar          ^E
     ForwardAgent        no
     ForwardX11          no
     HashKnownHosts      no
+    IdentityAgent       ${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh
     ServerAliveInterval 120
+    UserKnownHostsFile  ${XDG_STATE_HOME}/ssh/known_hosts
+
+Include                 /etc/ssh/ssh_config
