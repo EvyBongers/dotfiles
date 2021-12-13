@@ -1,5 +1,8 @@
 # Have OpenSSH support XDG base directories
+alias scp="scp -F ${XDG_CONFIG_HOME}/ssh/config"
+alias sftp="sftp -F ${XDG_CONFIG_HOME}/ssh/config"
 alias ssh="ssh -F ${XDG_CONFIG_HOME}/ssh/config"
+alias sshfs="sshfs -F ${XDG_CONFIG_HOME}/ssh/config"
 
 function () {
     local -r known_hosts_file=${XDG_STATE_HOME}/ssh/known_hosts
