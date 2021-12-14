@@ -87,7 +87,7 @@ for_window [app_id="."] inhibit_idle fullscreen
 # Read `man 5 sway-input` for more information about this section.
 input type:keyboard {
     xkb_layout us(euro),us(colemak_dh)
-    xkb_options compose:ralt,grp:rctrl_toggle
+    xkb_options caps:escape_shifted_capslock,compose:ralt,grp:rctrl_toggle
     xkb_numlock disabled
 }
 
