@@ -1,6 +1,6 @@
 if command -v virtualenvwrapper.sh &>/dev/null; then
     export WORKON_HOME="${XDG_DATA_HOME}/virtualenvs"
-    export PROJECT_HOME=$HOME/code
+    export PROJECT_HOME="${HOME}/git"
     export VIRTUALENVWRAPPER_PYTHON=$(command -v python3)
     export VIRTUALENVWRAPPER_SCRIPT=$(command -v virtualenvwrapper.sh)
     source "${VIRTUALENVWRAPPER_SCRIPT}"
