@@ -1,6 +1,5 @@
 [global_config]
-  title_font = Fantasque Sans Mono 9
-  title_use_system_font = False
+  title_use_system_font = True
 [keybindings]
 [layouts]
   [[default]]
