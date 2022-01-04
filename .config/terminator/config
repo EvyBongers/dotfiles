@@ -1,6 +1,9 @@
 [global_config]
   title_use_system_font = True
 [keybindings]
+[profiles]
+  [[default]]
+    scrollback_infinite = True
 [layouts]
   [[default]]
     [[[child1]]]
@@ -10,4 +13,3 @@
       parent = ""
       type = Window
 [plugins]
-[profiles]
