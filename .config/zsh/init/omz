@@ -12,8 +12,6 @@ plugins=(
   dotenv
   gh
   git
-  gpg-agent
-  ssh-agent
   vi-mode
   virtualenvwrapper
   zsh-autosuggestions
