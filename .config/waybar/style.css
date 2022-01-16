@@ -1,11 +1,26 @@
 @import "/etc/xdg/waybar/style.css";
 
+* {
+  min-height: 0;
+}
+
+#backlight,
+#battery,
+#clock,
+#cpu,
+#disk,
+#idle_inhibitor,
+#memory,
+#mode,
+#network,
+#pulseaudio,
+#temperature,
+#tray,
 #custom-arch_updates,
 #custom-kbd,
 #custom-spotify {
   padding: 0 10px;
-  margin: 0 4px;
-  color: #ffffff;
+  margin: 0 2px;
 }
 
 #bluetooth.disabled {
