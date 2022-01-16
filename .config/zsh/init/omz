@@ -8,11 +8,25 @@ HIST_STAMPS="yyyy-mm-dd"
 ZSH_CUSTOM="${XDG_DATA_HOME}/omz-custom"
 ZSH_COMPDUMP="${XDG_CACHE_HOME}/zsh/zcompdump-${HOST/.*/}-${ZSH_VERSION}"
 
+declare -a plugins
+declare -A optional_plugins
 plugins=(
   dotenv
-  gh
   git
   vi-mode
-  virtualenvwrapper
   zsh-autosuggestions
 )
+
+optional_plugins=(
+  [bazel]=bazel
+  [docker]=docker
+  [docker-compose]=docker-compose
+  [gh]=gh
+  [gpg-agent]=gpg-agent
+  [kubectl]=kubectl
+  [virtualenvwrapper.sh]=virtualenvwrapper
+)
+
+for key in "${(k)optional_plugins[@]}"; do
+    [[ ${+commands[${key}]} -eq 1 ]] && plugins+=(${optional_plugins[${key}]})
+done
