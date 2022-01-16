@@ -12,4 +12,4 @@ alias egrep="egrep --color=auto --exclude-dir=.git --exclude-dir=.hg --exclude-d
 alias view="/usr/bin/vim -R"
 
 # List hidden files, exclude vcs direcoties
-alias tree="tree -a -I .git -I .hg -I .svn"
+alias tree="tree -a -I '.git|.hg|.svn'"
