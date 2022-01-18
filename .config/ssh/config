@@ -1,3 +1,5 @@
+Match host * exec       "gpg-connect-agent updatestartuptty /bye"
+
 Host                    github.com gitlab.com git.sr.ht
     User                git
     IdentityFile        ${XDG_DATA_HOME}/ssh/ed25519_git
