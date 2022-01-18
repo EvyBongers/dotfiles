@@ -8,22 +8,22 @@ HIST_STAMPS="yyyy-mm-dd"
 ZSH_CUSTOM="${XDG_DATA_HOME}/omz-custom"
 ZSH_COMPDUMP="${XDG_CACHE_HOME}/zsh/zcompdump-${HOST/.*/}-${ZSH_VERSION}"
 
-declare -a plugins
-declare -A optional_plugins
-plugins=(
+declare -a plugins=(
   dotenv
   git
   vi-mode
   zsh-autosuggestions
 )
 
-optional_plugins=(
+declare -A optional_plugins=(
   [bazel]=bazel
   [docker]=docker
   [docker-compose]=docker-compose
+  [gcloud]=gcloud
   [gh]=gh
   [gpg-agent]=gpg-agent
   [kubectl]=kubectl
+  [terraform]=terraform
   [virtualenvwrapper.sh]=virtualenvwrapper
 )
 
