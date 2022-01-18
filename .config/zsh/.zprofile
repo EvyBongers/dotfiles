@@ -15,8 +15,8 @@ XDG_DATA_HOME="${HOME}/.local/share"
 XDG_STATE_HOME="${HOME}/.local/state"
 export XDG_CACHE_HOME XDG_CONFIG_HOME XDG_DATA_HOME XDG_STATE_HOME
 
-GOPATH="${HOME}/go"
-export GOPATH
+export GNUPGHOME="${XDG_DATA_HOME}/gnupg"
+export GOPATH="${HOME}/go"
 
 PATH="${HOME}/.local/bin:${PATH}"
 PATH="${HOME}/.go/bin:${PATH}"
