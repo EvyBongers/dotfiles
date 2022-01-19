@@ -30,6 +30,9 @@
 !/.local/share/
 /.local/share/*
 !/.local/share/fonts/
+!.local/share/gnupg/
+.local/share/gnupg/*
+!.local/share/gnupg/gpg-agent.conf
 !/.local/share/omz-custom/
 !/.local/share/ohmyzsh
 !/.mozilla/native-messaging-hosts/gpgmejson.json
