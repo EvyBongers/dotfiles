@@ -12,7 +12,6 @@ Host                    *
     ForwardAgent        no
     ForwardX11          no
     HashKnownHosts      no
-    IdentityAgent       ${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh
     ServerAliveInterval 120
     UserKnownHostsFile  ${XDG_STATE_HOME}/ssh/known_hosts
 
