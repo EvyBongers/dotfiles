@@ -1,0 +1,15 @@
+XDG_CACHE_HOME      DEFAULT="@{HOME}/.cache"
+XDG_CONFIG_HOME     DEFAULT="@{HOME}/.config"
+XDG_DATA_HOME       DEFAULT="@{HOME}/.local/share"
+XDG_STATE_HOME      DEFAULT="@{HOME}/.local/state"
+
+EDITOR              DEFAULT=vim
+PAGER               DEFAULT=less
+LANG                DEFAULT="en_US.UTF-8"
+
+GIT_EDITOR          DEFAULT="${EDITOR}"
+MANPAGER            DEFAULT="${PAGER}"
+GNUPGHOME           DEFAULT="${XDG_DATA_HOME}/gnupg"
+SSH_AUTH_SOCK       DEFAULT="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
+VIMINIT             DEFAULT="source ${XDG_CONFIG_HOME}/vim/vimrc"
+ZDOTDIR             DEFAULT="${XDG_CONFIG_HOME}/zsh"

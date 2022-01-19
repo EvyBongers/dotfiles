@@ -36,5 +36,6 @@
 !/.local/share/omz-custom/
 !/.local/share/ohmyzsh
 !/.mozilla/native-messaging-hosts/gpgmejson.json
+!/.pam_environment
 !/.profile
 !/.zshenv
