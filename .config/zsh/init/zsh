@@ -11,3 +11,6 @@ if command -v gbt &>/dev/null; then
 else
     ZSH_THEME="afowler"
 fi
+
+# Make sure gpg agent is available on this tty during initialization
+gpg-connect-agent updatestartuptty /bye &>/dev/null
