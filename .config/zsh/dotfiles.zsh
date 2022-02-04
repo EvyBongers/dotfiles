@@ -1,3 +1,9 @@
+function home() {
+    git --work-tree=${HOME} \
+        --git-dir=${HOME}/.files.git \
+        "${@}"
+}
+
 function home_current_branch() {
     declare -a cmds=(
         "home branch --show-current"
@@ -36,8 +42,6 @@ function home_switch() {
 # Aliases
 # (sorted alphabetically)
 #
-
-alias home="git --work-tree=${HOME} --git-dir=${HOME}/.files.git"
 
 alias ha='home add'
 alias hb='home branch'
