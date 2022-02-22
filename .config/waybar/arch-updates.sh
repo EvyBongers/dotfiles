@@ -1,10 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 #
 # Dependencies:
 # - checkupdates (provided by pacman-contrib)
 # - jq
 # - wc (provided by coreutils)
 # - yay (optional, for checking AUR packages)
+if [[ "${ZSH_EVAL_CONTEXT}" != "toplevel" ]]; then
+    return 1
+fi
 
 set -o pipefail
 set -o errexit
@@ -34,6 +37,4 @@ function main() {
         --arg class "${class}"
 }
 
-if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
-    main
-fi
+main "${@}"

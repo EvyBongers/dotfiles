@@ -1,15 +1,17 @@
-#!/bin/bash
-TERMINALS=(
+#!/usr/bin/env zsh
+if [[ "${ZSH_EVAL_CONTEXT}" != "toplevel" ]]; then
+    return 1
+fi
+
+declare -ar emulators=(
     terminator
     tilda
 )
 
 function main() {
-    for terminal in "${TERMINALS[@]}"; do
-        EXEC="$(command -v "${terminal}")" && exec "${EXEC}"
+    for emulator in "${emulators[@]}"; do
+        exe="$(command -v "${emulator}")" && exec "${exe}"
     done
 }
 
-if [[ "${0}" == "${BASH_SOURCE[0]}" ]]; then
-    main
-fi
+main "${@}"
