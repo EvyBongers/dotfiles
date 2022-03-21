@@ -1,0 +1,8 @@
+/*
+!/.gitignore
+!/fonts/
+!/gnupg/
+/gnupg/*
+!/gnupg/gpg-agent.conf
+!/omz-custom/
+!/ohmyzsh/
