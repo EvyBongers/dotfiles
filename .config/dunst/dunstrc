@@ -1,0 +1,28 @@
+# vim: ft=cfg
+
+[global]
+    follow = keyboard
+    width = 500
+    height = 300
+    notification_limit = 0
+    origin = top-right
+    offset = 100x25
+    sort = yes
+    font = Dejavu Sans Book 11
+    icon_theme = "Adwaita"
+    enable_recursive_icon_lookup = true
+    max_icon_size = 64
+    enable_posix_regex = true
+    dmenu = "/usr/bin/wofi --dmenu --prompt=dunst"
+    corner_radius = 5
+    layer = top
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
+
+[batsignal]
+    appname = batsignal
+    background = #f01c1c
+    frame_color = #b72b2b
+    timeout = 0
+    set_transient = yes

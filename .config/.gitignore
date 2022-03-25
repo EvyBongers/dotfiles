@@ -2,12 +2,12 @@
 !/.gitignore
 !/chromium-flags.conf
 !/chromium/NativeMessagingHosts/gpgmejson.json
+!/dunst/
 !/fontconfig/
 !/git/
 /git/*
 !/git/config
 !/gtk-3.0/
-!/mako/
 !/ssh/
 !/swappy/
 !/sway/
