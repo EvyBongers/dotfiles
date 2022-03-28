@@ -4,5 +4,8 @@
 !/gnupg/
 /gnupg/*
 !/gnupg/gpg-agent.conf
+!/go/
+/go/*
+!/go/bin/
 !/omz-custom/
 !/ohmyzsh/
