@@ -3,6 +3,7 @@ function home() {
         --git-dir=${HOME}/.files.git \
         "${@}"
 }
+compdef _git home
 
 function home_current_branch() {
     declare -a cmds=(
