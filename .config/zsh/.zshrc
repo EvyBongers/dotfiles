@@ -1,9 +1,7 @@
 # Source files for initializing zsh
-if [[ -d "${XDG_CONFIG_HOME}/zsh/init" ]]; then
-    for file in $(find -L "${XDG_CONFIG_HOME}/zsh/init" -type f |sort); do
-        [[ -r "${file}" ]] && source "${file}"
-    done
-fi
+for file in "${ZDOTDIR}/init"/*; do
+    [[ -r "${file}" ]] && source "${file}"
+done
 
 if [[ -o interactive ]]; then
     # Load OhMyZSH
@@ -11,8 +9,6 @@ if [[ -o interactive ]]; then
 fi
 
 # Source additional zsh files
-if [[ -d "${XDG_CONFIG_HOME}/zsh" ]]; then
-    for file in $(find -L "${XDG_CONFIG_HOME}/zsh" -type f -name '*.zsh' |sort); do
-        [[ -r "${file}" ]] && source "${file}"
-    done
-fi
+for file in "${ZDOTDIR}"/*.zsh; do
+    [[ -r "${file}" ]] && source "${file}"
+done
