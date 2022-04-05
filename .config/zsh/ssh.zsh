@@ -6,17 +6,24 @@ alias sshfs="sshfs -F ${XDG_CONFIG_HOME}/ssh/config"
 
 function () {
     local -r known_hosts_file=${XDG_STATE_HOME}/ssh/known_hosts
-    if [[ ! -r "${known_hosts_file}" ]]; then
-        return
-    fi
+    [[ -r "${known_hosts_file}" ]] || return
 
     while read -r line; do
         local fqdn="${line%%[ ,]*}"
+
         if [[ "${fqdn}" =~ ":[0-9]+$" ]]; then
             fqdn="${${fqdn%%:*}:1:-1}"
         fi
 
-        fn="function ${fqdn}() { ${pre_exec:-} local opts=\"\"; while [[ \$# -ge 1 ]]; do next_word=\"\$1\"; shift; if [[ \$\"\${next_word}\" != \$\"--\" ]]; then opts=\"\${opts}\${opts:+ }\$next_word\"; else break; fi; done; local args=\"\$*\"; comm=\"ssh \${opts} ${fqdn} \${args}\"; eval \"\${comm}\"; }"
-        eval "${fn}"
+        eval "function ${fqdn}() {"'
+                local -a opts
+                until [[ $"${1:---}" == $"--" ]] {
+                    opts+=("${1}")
+                    shift
+                }
+                shift
+                local args="$*"
+                '"ssh ${port_arg:-}\${opts} ${fqdn} \${args}
+              }"
     done < "${known_hosts_file}"
 }
