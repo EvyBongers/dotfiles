@@ -10,3 +10,4 @@
 !/.local/share/
 !/.mozilla/native-messaging-hosts/gpgmejson.json
 !/.profile
+!/.zshenv
