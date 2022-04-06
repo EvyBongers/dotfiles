@@ -14,6 +14,6 @@ let b:ale_fixers = [
       \   'trim_whitespace',
       \   'rufo',
       \]
-let g:ale_fix_on_save = 1
+let b:ale_fix_on_save = 1
 
 nnoremap <buffer> <silent> <LocalLeader>= :ALEFix<CR>
