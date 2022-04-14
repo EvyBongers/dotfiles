@@ -21,7 +21,7 @@ function () {
                     opts+=("${1}")
                     shift
                 }
-                shift
+                [[ -n "${1:-}" ]] && shift
                 local args="$*"
                 '"ssh ${port_arg:-}\${opts} ${fqdn} \${args}
               }"
