@@ -1,6 +1,8 @@
 CDPATH="${HOME}"
 # ${HOME}/projcts/{scope}/{repo}
-for dir in "${HOME}/projects"/*; do
-    CDPATH="${CDPATH}:${dir}"
-done
+[[ -d "${HOME}/projects" ]] &&
+    for dir in "${HOME}/projects"/*; do
+        [[ -d "${dir}" ]] || continue
+        CDPATH="${CDPATH}:${dir}"
+    done
 export CDPATH
