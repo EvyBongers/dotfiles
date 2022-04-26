@@ -3,7 +3,7 @@ function home() {
         --git-dir=${HOME}/.files.git \
         "${@}"
 }
-compdef _git home
+compdef _git home=git
 
 function home_current_branch() {
     declare -a cmds=(
@@ -44,6 +44,7 @@ function home_switch() {
 # (sorted alphabetically)
 #
 
+alias h='home'
 alias ha='home add'
 alias hb='home branch'
 alias hba='home branch -a'

@@ -25,5 +25,6 @@ function () {
                 local args="$*"
                 '"ssh ${port_arg:-}\${opts} ${fqdn} \${args}
               }"
+        compdef ${fqdn}=ssh
     done < "${known_hosts_file}"
 }
