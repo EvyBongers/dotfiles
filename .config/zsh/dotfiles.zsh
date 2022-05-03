@@ -3,7 +3,7 @@ function home() {
         --git-dir=${HOME}/.files.git \
         "${@}"
 }
-compdef _git home=git
+compdef -e "words[1]=(git --work-tree=${HOME} --git-dir=${HOME}/.files.git); service=git; (( CURRENT+=2 )); _git" home
 
 function home_current_branch() {
     declare -a cmds=(
