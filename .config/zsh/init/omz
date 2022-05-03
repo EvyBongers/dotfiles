@@ -1,4 +1,4 @@
-export ZSH="${XDG_DATA_HOME}/ohmyzsh"
+ZSH="${XDG_DATA_HOME}/ohmyzsh"
 [[ -f "${ZSH}/oh-my-zsh.sh" ]] ||
     git --work-tree=${HOME} --git-dir=${HOME}/.files.git submodule update --init
 
