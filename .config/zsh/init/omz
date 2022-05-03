@@ -6,7 +6,8 @@ CASE_SENSITIVE="true"
 DISABLE_AUTO_UPDATE="true"
 HIST_STAMPS="yyyy-mm-dd"
 ZSH_CUSTOM="${XDG_DATA_HOME}/omz-custom"
-ZSH_COMPDUMP="${XDG_CACHE_HOME}/zsh/zcompdump-${HOST/.*/}-${ZSH_VERSION}"
+ZSH_CACHE_DIR="${XDG_CACHE_HOME}/zsh"
+ZSH_COMPDUMP="${ZSH_CACHE_DIR}/zcompdump-${HOST/.*/}-${ZSH_VERSION}"
 
 declare -a plugins=(
   dotenv
