@@ -1,0 +1,8 @@
+profile portable {
+    output "eDP-1" enable position 0,0 mode 1920x1080 scale 1
+}
+
+profile home_office {
+    output "Philips Consumer Electronics Company PHL 279P1 UK82044001104" enable position 0,0 mode 3840x2160 scale 1.25
+    output "eDP-1" enable position 576,1728 mode 1920x1080 scale 1
+}

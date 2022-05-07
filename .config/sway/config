@@ -290,6 +290,7 @@ exec blueman-applet
 exec batsignal -b
 exec nm-applet --indicator
 exec run_keybase -a
+exec kanshi
 
 # Make firefox sharing indicator window float
 for_window [app_id="firefox" title="Firefox — Sharing Indicator"] floating enable
