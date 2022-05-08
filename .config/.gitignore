@@ -3,6 +3,7 @@
 !/chromium-flags.conf
 !/chromium/NativeMessagingHosts/gpgmejson.json
 !/dunst/
+!/environment.d/
 !/fontconfig/
 !/git/
 /git/*
