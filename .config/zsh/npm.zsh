@@ -1,1 +1,1 @@
-npm_config_userconfig="${XDG_CONFIG_HOME}/npm/npmrc"
+export npm_config_userconfig="${XDG_CONFIG_HOME}/npm/npmrc"
