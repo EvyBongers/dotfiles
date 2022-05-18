@@ -19,7 +19,7 @@ function home_switch() {
     local current_branch local_branch target_branch
 
     declare -r current_branch="$(home_current_branch)"
-    declare -r local_branch="${1:-$SHORT_HOST}"
+    declare -r local_branch="${1:-${(L)SHORT_HOST}}"
 
     if [[ -z "${current_branch:-}" ]]; then
         echo "Currently in detached head" >&2
