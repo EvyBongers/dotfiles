@@ -15,26 +15,37 @@ PLAYER_IFACE: typing.Final[str] = "org.mpris.MediaPlayer2.Player"
 OBJECT_PATH: typing.Final[str] = "/org/mpris/MediaPlayer2"
 
 
-def printUpdate(metadata, playbackStatus):
-    album = metadata.get("xesam:album")
-    artist = metadata.get("xesam:artist")[0]
-    microtime = metadata.get("mpris:length")
-    title = metadata.get("xesam:title")
+def printUpdate(player):
+    try:
+        metadata = player.Metadata
+        playbackStatus = player.PlaybackStatus
 
-    trackInfo = FORMAT.format(
-        artist=artist,
-        album=album,
-        playback=playbackStatus,
-        time=str(timedelta(seconds=microtime // 1_000_000)),
-        title=title,
-    )
-    output = {
-        "text": trackInfo,
-        "class": playbackStatus.lower(),
-        "alt": "Spotify",
-    }
-    sys.stdout.write(json.dumps(output) + "\n")
-    sys.stdout.flush()
+        album = metadata.get("xesam:album")
+        artist = metadata.get("xesam:artist")[0]
+        microtime = metadata.get("mpris:length")
+        title = metadata.get("xesam:title")
+
+        trackInfo = FORMAT.format(
+            artist=artist,
+            album=album,
+            playback=playbackStatus,
+            time=str(timedelta(seconds=microtime // 1_000_000)),
+            title=title,
+        )
+        output = {
+            "text": trackInfo,
+            "class": playbackStatus.lower(),
+            "alt": "Spotify",
+        }
+    except:
+        output = {
+            "text": "Playback is stopped",
+            "class": "custom-spotify",
+            "alt": "Spotify",
+        }
+    finally:
+        sys.stdout.write(json.dumps(output) + "\n")
+        sys.stdout.flush()
 
 
 def main():
@@ -54,23 +65,8 @@ def main():
             spotify = bus.get(DBUS_CLIENT, OBJECT_PATH)
             player = spotify[PLAYER_IFACE]
 
-            try:
-                metadata = player.Metadata
-                playbackStatus = player.PlaybackStatus
-                printUpdate(metadata, playbackStatus)
-
-            except Exception:
-                output = {
-                    "text": "Playback is stopped",
-                    "class": "custom-spotify",
-                    "alt": "Spotify",
-                }
-                sys.stdout.write(json.dumps(output) + "\n")
-                sys.stdout.flush()
-
-            spotify.PropertiesChanged.connect(
-                lambda _s, _a, _as: printUpdate(_a["Metadata"], _a["PlaybackStatus"])
-            )
+            printUpdate(player)
+            spotify.PropertiesChanged.connect(printUpdate)
 
         except Exception:
             # Spotify isn't running, keep the loop running
