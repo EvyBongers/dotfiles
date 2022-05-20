@@ -65,8 +65,12 @@ def main():
             spotify = bus.get(DBUS_CLIENT, OBJECT_PATH)
             player = spotify[PLAYER_IFACE]
 
+            def handlePropertiesChanged(_s, _a, _as):
+                if _s == PLAYER_IFACE:
+                    printUpdate(player)
+
             printUpdate(player)
-            spotify.PropertiesChanged.connect(printUpdate)
+            spotify.PropertiesChanged.connect(handlePropertiesChanged)
 
         except Exception:
             # Spotify isn't running, keep the loop running
