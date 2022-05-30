@@ -36,10 +36,14 @@
         "format-icons": ["", "", "", "", ""],
     },
     "bluetooth": {
-        "format-icons": {
-             "enabled": "",
-             "disabled": ""
-        },
+        "format": " {status}",
+        "format-connected": " {device_alias}",
+        "format-connected-battery": " {device_alias}  {device_battery_percentage}%",
+        "format-device-preference": ["Sparkle Motion", "MX Ergo"],
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_address}\t{controller_alias}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_address}\t{device_alias}",
+        "tooltip-format-enumerate-connected-battery": "{device_address}\t{device_alias}\t {device_battery_percentage}%"
     },
     "clock": {
          "format-alt": "{:%Y-%m-%d  %H:%M}",
