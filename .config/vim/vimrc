@@ -4,29 +4,20 @@ endif
 
 " Make vim respect XDG directories
 :source ~/.config/vim/xdg.vim
+
 " Shortcut to remap colemak to qwerty based keybindings
 nnoremap <silent> gm :runtime colemak-remap.vim<CR>
 
-filetype off
 filetype plugin indent on
 
-if has('gui_running')
-  " started as gvim which has a light background
-  set background=light
-  " Make shift-insert work like in Xterm
-  map <S-Insert> <MiddleMouse>
-  map! <S-Insert> <MiddleMouse>
-else
-  " started from console, so we'll most likely have a dark background
-  set background=dark
-endif
 set autoindent                  " always set autoindenting on
+set background=dark             " set colorscheme for dark background
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
-set colorcolumn=81              " indicate when going over 80 columns
+set display=truncate            " Show @@@ in the last line if it is truncated
 set encoding=utf-8              " always use utf-8 encoding
 set expandtab                   " expand tabs to spaces
 set fileformat=unix             " use unix file format
-set history=50                  " keep 50 lines of command line history
+set history=200                 " keep 200 lines of command line history
 set incsearch                   " do incremental searching
 set list                        " enable list mode to display differences between tabs and spaces
 set listchars=tab:»˙,trail:•    " set the characters used to identify tabs and trailing spaces
@@ -36,16 +27,13 @@ set shiftwidth=4                " shift 4 spaces for indentation
 set showcmd                     " display incomplete commands
 set softtabstop=4               " use 4 spaces for tab
 set tabstop=8                   " place tabstop on 8 spaces, makes unexpanded tabs stand out
+set wildmenu                    " display completion matches in a status line
 set wrap                        " wrap text
 
 highlight TrailWhitespace ctermbg=red guibg=darkred
 highlight UnwantedTab ctermbg=red guibg=darkred
 
 if has("autocmd")
-  " support for autocommands has been enabled
-  autocmd BufNewFile,BufRead *.py,*.pyw,*.c,*.h match TrailWhitespace /\s\+$/
-  autocmd BufNewFile,BufRead *.py,*.pyw,*.c,*.h match UnwantedTab /\t/
-
   autocmd BufRead,BufNewFile *.hcl set filetype=terraform
 
   autocmd FileType bzl          :runtime bzl.vim
@@ -71,8 +59,8 @@ if has("autocmd")
   nnoremap <buffer> <silent> <LocalLeader>= :ALEFix<CR>
 endif
 
-" If the terminal supports colors or vim is started in gui, switch syntax
-" highlighting on.
+" Switch syntax highlighting on when the terminal has colors or when using the
+" GUI (which always has colors).
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
   syntax on
@@ -87,6 +75,15 @@ nnoremap <C-H> <C-W><C-H>
 
 " Enable folding with the spacebar
 nnoremap <space> za
+
+" Convenient command to see the difference between the current buffer and the
+" file it was loaded from, thus the changes you made.
+" Only define it when not defined already.
+" Revert with: ":delcommand DiffOrig".
+if !exists(":DiffOrig")
+  command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
+                  \ | wincmd p | diffthis
+endif
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
