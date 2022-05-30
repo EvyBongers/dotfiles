@@ -4,21 +4,7 @@
   min-height: 0;
 }
 
-#backlight,
-#battery,
-#clock,
-#cpu,
-#disk,
-#idle_inhibitor,
-#memory,
-#mode,
-#network,
-#pulseaudio,
-#temperature,
-#tray,
-#custom-arch_updates,
-#custom-kbd,
-#custom-spotify {
+.modules-right > widget > * {
   padding: 0 10px;
   margin: 0 2px;
 }
