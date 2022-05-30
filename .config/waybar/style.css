@@ -8,6 +8,10 @@
   padding: 0 10px;
 }
 
+#bluetooth.on,
+#bluetooth.connected {
+  background-color: #25c525;
+}
 #bluetooth.disabled {
   background-color: #ecf0f1;
 }
