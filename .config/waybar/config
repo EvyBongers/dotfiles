@@ -14,7 +14,7 @@
         "backlight",
         "pulseaudio",
         "idle_inhibitor",
-        "custom/kbd",
+        "sway/language",
         "clock",
         "bluetooth",
         "tray",
@@ -63,9 +63,8 @@
         "interval": 300,
         "return-type": "json",
     },
-    "custom/kbd": {
-        "exec": "$HOME/.config/waybar/kbd.sh",
-        "interval": 5,
+    "sway/language": {
+        "format": " {long}",
     },
     "custom/spotify": {
         "exec": "$HOME/.config/waybar/spotify.py 2> /dev/null",
