@@ -14,22 +14,20 @@ set -o errexit
 set -o nounset
 
 function main() {
-    local num_repo_upgrades num_aur_upgrades
-    local text="System up-to-date"
-    local class="ok"
+    local class num_repo_upgrades num_aur_upgrades
 
     num_repo_upgrades=$( (checkupdates |wc -l) || exit 0)
-    if (command -v yay && yay --version) &>/dev/null; then
-        num_aur_upgrades=$( (yay -Qua 2>/dev/null |wc -l) || true)
+    num_aur_upgrades=$( command -v yay &>/dev/null && (yay -Qua 2>/dev/null |wc -l) || true)
+
+    text="Updates: ${num_repo_upgrades}"
+    if [[ -n "${num_aur_upgrades:-}" ]]; then
+        text+="/${num_aur_upgrades}"
     fi
 
     if [[ $[num_repo_upgrades+${num_aur_upgrades:-0}] -gt 0 ]]; then
         class="pending"
-        if [[ -z "${num_aur_upgrades:-}" ]]; then
-            text="Updates: ${num_repo_upgrades}"
-        else
-            text="Updates: ${num_repo_upgrades}/${num_aur_upgrades}"
-        fi
+    else
+        class="ok"
     fi
 
     jq -c -M -n '$ARGS.named' \
