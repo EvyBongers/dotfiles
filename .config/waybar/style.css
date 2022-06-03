@@ -8,13 +8,17 @@
   padding: 0 10px;
 }
 
-#bluetooth.on,
+#bluetooth {
+  background-color: #30408c;
+}
+#bluetooth.on {
+  color: #ffffff;
+}
 #bluetooth.connected {
-  background-color: #25c525;
+  color: #299d0b;
 }
 #bluetooth.disabled {
-  background-color: #ecf0f1;
-  color: #000000;
+  color: #d53b2f;
 }
 
 #custom-kbd {
