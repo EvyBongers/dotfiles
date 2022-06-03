@@ -21,7 +21,7 @@
     ],
     "backlight": {
         "device": "intel_backlight",
-        "format": "{percent}% {icon}",
+        "format": "{icon} {percent}%",
         "format-icons": ["", ""],
         "on-scroll-up": "brightnessctl set +1%",
         "on-scroll-down": "brightnessctl set 1%-",
@@ -32,7 +32,7 @@
             "warning": 30,
             "critical": 15,
         },
-        "format": "{capacity}% {icon}",
+        "format": "{icon} {capacity}%",
         "format-icons": ["", "", "", "", ""],
     },
     "bluetooth": {
@@ -44,7 +44,7 @@
         "tooltip-format-enumerate-connected-battery": "{device_address}\t{device_alias}\t {device_battery_percentage}%"
     },
     "clock": {
-         "format-alt": "{:%Y-%m-%d  %H:%M}",
+        "format": " {:%H:%M}",
     },
     "cpu": {
         "states": {
@@ -52,12 +52,12 @@
             "critical": 15,
         },
         "interval": 10,
-        "format": "{} ",
+        "format": " {load}",
         "max-length": 10,
     },
     "custom/arch_updates": {
         "exec": "$HOME/.config/waybar/arch-updates.sh 2> /dev/null",
-        "format": "{} ",
+        "format": " {}",
         "interval": 300,
         "return-type": "json",
     },
@@ -75,7 +75,7 @@
             "critical": 15,
         },
         "interval": 30,
-        "format": "{free} GiB",
+        "format": " {free} GiB",
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -90,7 +90,7 @@
             "critical": 15,
         },
         "interval": 30,
-        "format": "{used:0.1f}G/{total:0.1f}G ",
+        "format": " {used:0.1f}G/{total:0.1f}G",
     },
     "network": {
         "format": "{icon} {ipaddr}",
@@ -106,8 +106,8 @@
         "tooltip-format-wifi": "{icon} {ifname} {ipaddr} ({essid} {signalStrength}%)",
     },
     "pulseaudio": {
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon}",
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
         "format-muted": "",
         "format-icons": {
             "headphones": "",
