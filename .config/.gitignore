@@ -1,5 +1,6 @@
 /*
 !/.gitignore
+!/alacritty/
 !/chromium-flags.conf
 !/chromium/NativeMessagingHosts/gpgmejson.json
 !/dunst/
@@ -10,6 +11,7 @@
 !/git/config
 !/gtk-3.0/
 !/kanshi/
+!/kitty/
 !/npm/
 !/ssh/
 !/swappy/
