@@ -286,6 +286,7 @@ bar {
 # Autostart applications
 #
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK
+exec_always --no-startup-id systemd-cat --identifier sworkstyle sworkstyle
 exec blueman-applet
 exec batsignal -b
 exec nm-applet --indicator

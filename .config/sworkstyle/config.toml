@@ -1,0 +1,26 @@
+# pattern: Can either be the exact "app_name" (app_id/class) of the window or a regex string in the format of `"/{regex}/"` which will match the window "title".
+# icon: Your beautiful icon
+fallback = ''
+
+[matching]
+'discord' = ''
+'/Signal/' = ''
+'Slack' = ''
+'Steam' = ''
+'vlc' = ''
+'noson-gui' = ''
+'/Pararius Mail/' = ''
+'/Pararius – Calendar/' = ''
+'Code' = ''
+'code-oss' = ''
+'Spotify' = ''
+'/(?i)Github.*Firefox/' = ''
+'/npm/' = ''
+'/node/' = ''
+'/yarn/' = ''
+'Alacritty' = ''
+'terminator' = ''
+'kitty' = ''
+'firefox' = ''
+'Google-chrome' = ''
+'Chromium' = ''
