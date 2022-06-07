@@ -1,127 +1,134 @@
-{
-    "layer": "top",
-    "position": "bottom",
-    "spacing": 4,
-    "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-right": [
-        "custom/spotify",
-        "custom/arch_updates",
-        "disk",
-        "cpu",
-        "memory",
-        "network",
-        "sway/language",
-        "battery",
-        "backlight",
-        "pulseaudio",
-        "bluetooth",
-        "idle_inhibitor",
-        "tray",
-        "clock",
-    ],
-    "backlight": {
-        "device": "intel_backlight",
-        "format": "{icon} {percent}%",
-        "format-icons": ["", ""],
-        "on-scroll-up": "brightnessctl set +1%",
-        "on-scroll-down": "brightnessctl set 1%-",
-        "smooth-scrolling-threshold": "2.0",
+[
+    {
+        "layer": "top",
+        "position": "top",
+        "spacing": 4,
+        "modules-left": ["sway/workspaces", "sway/mode"],
+        "modules-center": ["sway/window"],
+        "modules-right": ["tray", "clock"],
     },
-    "battery": {
-        "states": {
-            "warning": 30,
-            "critical": 15,
+    {
+        "layer": "top",
+        "position": "bottom",
+        "spacing": 4,
+        "modules-right": [
+            "custom/spotify",
+            "custom/arch_updates",
+            "disk",
+            "cpu",
+            "memory",
+            "network",
+            "sway/language",
+            "battery",
+            "backlight",
+            "pulseaudio",
+            "bluetooth",
+            "idle_inhibitor",
+        ],
+        "backlight": {
+            "device": "intel_backlight",
+            "format": "{icon} {percent}%",
+            "format-icons": ["", ""],
+            "on-scroll-up": "brightnessctl set +1%",
+            "on-scroll-down": "brightnessctl set 1%-",
+            "smooth-scrolling-threshold": "2.0",
         },
-        "format": "{icon} {capacity}%",
-        "format-icons": ["", "", "", "", ""],
-    },
-    "bluetooth": {
-        "format": "",
-        "format-connected": " {num_connections}",
-        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-        "tooltip-format-connected": "{controller_address}\t{controller_alias}\n\n{num_connections} connected\n\n{device_enumerate}",
-        "tooltip-format-enumerate-connected": "{device_address}\t{device_alias}",
-        "tooltip-format-enumerate-connected-battery": "{device_address}\t{device_alias}\t {device_battery_percentage}%"
-    },
-    "clock": {
-        "format": " {:%H:%M}",
-    },
-    "cpu": {
-        "states": {
-            "warning": 30,
-            "critical": 15,
+        "battery": {
+            "states": {
+                "warning": 30,
+                "critical": 15,
+            },
+            "format": "{icon} {capacity}%",
+            "format-icons": ["", "", "", "", ""],
         },
-        "interval": 10,
-        "format": " {load}",
-        "max-length": 10,
-    },
-    "custom/arch_updates": {
-        "exec": "$HOME/.config/waybar/arch-updates.sh 2> /dev/null",
-        "format": " {}",
-        "interval": 300,
-        "return-type": "json",
-    },
-    "sway/language": {
-        "format": " {long}",
-    },
-    "custom/spotify": {
-        "exec": "$HOME/.config/waybar/spotify.py 2> /dev/null",
-        "format": " {}",
-        "return-type": "json",
-    },
-    "disk": {
-        "states": {
-            "warning": 30,
-            "critical": 15,
+        "bluetooth": {
+            "format": "",
+            "format-connected": " {num_connections}",
+            "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+            "tooltip-format-connected": "{controller_address}\t{controller_alias}\n\n{num_connections} connected\n\n{device_enumerate}",
+            "tooltip-format-enumerate-connected": "{device_address}\t{device_alias}",
+            "tooltip-format-enumerate-connected-battery": "{device_address}\t{device_alias}\t {device_battery_percentage}%"
         },
-        "interval": 30,
-        "format": " {free} GiB",
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": "",
+        "clock": {
+            "format": " {:%H:%M}",
+        },
+        "cpu": {
+            "states": {
+                "warning": 30,
+                "critical": 15,
+            },
+            "interval": 10,
+            "format": " {load}",
+            "max-length": 10,
+        },
+        "custom/arch_updates": {
+            "exec": "$HOME/.config/waybar/arch-updates.sh 2> /dev/null",
+            "format": " {}",
+            "interval": 300,
+            "return-type": "json",
+        },
+        "sway/language": {
+            "format": " {long}",
+        },
+        "custom/spotify": {
+            "exec": "$HOME/.config/waybar/spotify.py 2> /dev/null",
+            "format": " {}",
+            "return-type": "json",
+        },
+        "disk": {
+            "states": {
+                "warning": 30,
+                "critical": 15,
+            },
+            "interval": 30,
+            "format": " {free} GiB",
+        },
+        "idle_inhibitor": {
+            "format": "{icon}",
+            "format-icons": {
+                "activated": "",
+                "deactivated": "",
+            },
+        },
+        "memory": {
+            "states": {
+                "warning": 30,
+                "critical": 15,
+            },
+            "interval": 30,
+            "format": " {used:0.1f}G/{total:0.1f}G",
+        },
+        "network": {
+            "format": "{icon} {ipaddr}",
+            "format-icons": {
+                "disabled": "",
+                "disconnected": "",
+                "linked": "",
+                "ethernet": "",
+                "wifi": "",
+            },
+            "tooltip-format": "{icon} {ifname}",
+            "tooltip-format-ethernet": "{icon} {ifname} {ipaddr}",
+            "tooltip-format-wifi": "{icon} {ifname} {ipaddr} ({essid} {signalStrength}%)",
+        },
+        "pulseaudio": {
+            "format": "{icon} {volume}%",
+            "format-bluetooth": "{icon} {volume}%",
+            "format-muted": "",
+            "format-icons": {
+                "headphones": "",
+                "handsfree": "",
+                "headset": "",
+                "phone": "",
+                "portable": "",
+                "car": "",
+                "default": ["", ""],
+            },
+            "scroll-step": 1,
+            "on-click": "pavucontrol",
+        },
+        "sway/window": {
+            "max-length": 50,
         },
     },
-    "memory": {
-        "states": {
-            "warning": 30,
-            "critical": 15,
-        },
-        "interval": 30,
-        "format": " {used:0.1f}G/{total:0.1f}G",
-    },
-    "network": {
-        "format": "{icon} {ipaddr}",
-        "format-icons": {
-            "disabled": "",
-            "disconnected": "",
-            "linked": "",
-            "ethernet": "",
-            "wifi": "",
-        },
-        "tooltip-format": "{icon} {ifname}",
-        "tooltip-format-ethernet": "{icon} {ifname} {ipaddr}",
-        "tooltip-format-wifi": "{icon} {ifname} {ipaddr} ({essid} {signalStrength}%)",
-    },
-    "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "format-bluetooth": "{icon} {volume}%",
-        "format-muted": "",
-        "format-icons": {
-            "headphones": "",
-            "handsfree": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", ""],
-        },
-        "scroll-step": 1,
-        "on-click": "pavucontrol",
-    },
-    "sway/window": {
-        "max-length": 50,
-    },
-}
+]
