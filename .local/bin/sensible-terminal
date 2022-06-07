@@ -11,7 +11,7 @@ declare -ar emulators=(
 
 function main() {
     for emulator in "${emulators[@]}"; do
-        exe="$(command -v "${emulator}")" && exec "${exe}"
+        [[ ${+commands[$emulator]} ]] && exec ${emulator} "${@}"
     done
 }
 
