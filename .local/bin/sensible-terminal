@@ -4,8 +4,9 @@ if [[ "${ZSH_EVAL_CONTEXT}" != "toplevel" ]]; then
 fi
 
 declare -ar emulators=(
+    alacritty
+    kitty
     terminator
-    tilda
 )
 
 function main() {
