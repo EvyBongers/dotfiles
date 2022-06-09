@@ -2,6 +2,7 @@
 
 * {
   min-height: 0;
+  font-size: 16px;
 }
 
 .modules-right > widget > * {
@@ -19,6 +20,11 @@
 }
 #bluetooth.disabled {
   color: #d53b2f;
+}
+
+#cpu {
+  padding: 0;
+  min-width: 4em;
 }
 
 #custom-kbd {
@@ -41,4 +47,5 @@
 
 #language {
   margin: 0;
+  min-width: 12em;
 }
