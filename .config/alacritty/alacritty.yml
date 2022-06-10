@@ -189,11 +189,16 @@
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
-#colors:
+colors:
+  # Kitty (https://github.com/alacritty/alacritty/wiki/Color-schemes)
+
   # Default colors
   #primary:
   #  background: '#1d1f21'
   #  foreground: '#c5c8c6'
+  primary:
+    background: '#000000'
+    foreground: '#dddddd'
 
     # Bright and dim foreground colors
     #
@@ -289,6 +294,15 @@
   #  magenta: '#b294bb'
   #  cyan:    '#8abeb7'
   #  white:   '#c5c8c6'
+  normal:
+    black:   '#000000'
+    red:     '#cc0403'
+    green:   '#19cb00'
+    yellow:  '#cecb00'
+    blue:    '#0d73cc'
+    magenta: '#cb1ed1'
+    cyan:    '#0dcdcd'
+    white:   '#dddddd'
 
   # Bright colors
   #bright:
@@ -300,6 +314,15 @@
   #  magenta: '#c397d8'
   #  cyan:    '#70c0b1'
   #  white:   '#eaeaea'
+  bright:
+    black:   '#767676'
+    red:     '#f2201f'
+    green:   '#23fd00'
+    yellow:  '#fffd00'
+    blue:    '#1a8fff'
+    magenta: '#fd28ff'
+    cyan:    '#14ffff'
+    white:   '#ffffff'
 
   # Dim colors
   #
