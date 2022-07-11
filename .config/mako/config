@@ -1,0 +1,24 @@
+anchor=top-right
+margin=25,100
+width=500
+height=300
+border-radius=5
+
+default-timeout=10000
+group-by=app-name
+
+on-button-left=exec makoctl menu -n "$id" wofi --dmenu --prompt 'Select action: '
+on-button-middle=dismiss-group
+on-button-right=dismiss
+on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
+
+format=<b>%a</b>\n%s\n\n%b
+
+[grouped]
+format=<b>%a (%g)</b>\n%s\n\n%b
+
+[app-name=batsignal]
+anchor=center
+background-color=#f01c1c
+border-color=#b72b2b
+default-timeout=0
