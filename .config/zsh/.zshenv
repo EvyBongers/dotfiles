@@ -1,8 +1,5 @@
-CDPATH="${HOME}"
-# ${HOME}/projcts/{scope}/{repo}
-[[ -d "${HOME}/projects" ]] &&
-    for dir in "${HOME}/projects"/*; do
-        [[ -d "${dir}" ]] || continue
-        CDPATH="${CDPATH}:${dir}"
-    done
-export CDPATH
+set -a
+for file in "${XDG_CONFIG_HOME}/zsh/env.d"/*; do
+    source "${file}"
+done
+set +a

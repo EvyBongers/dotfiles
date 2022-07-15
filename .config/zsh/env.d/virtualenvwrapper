@@ -1,0 +1,3 @@
+WORKON_HOME="${XDG_DATA_HOME}/virtualenvs"
+VIRTUALENVWRAPPER_PYTHON=$(command -v python3)
+VIRTUALENVWRAPPER_SCRIPT=$(command -v virtualenvwrapper.sh)

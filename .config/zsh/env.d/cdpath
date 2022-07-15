@@ -1,0 +1,9 @@
+CDPATH="${HOME}"
+# ${HOME}/projcts/{scope}/{repo}
+if [[ -d "${HOME}/projects" ]]; then
+    CDPATH="${CDPATH}:${HOME}/projects"
+    for dir in "${HOME}/projects"/*; do
+        [[ -d "${dir}" ]] || continue
+        CDPATH="${CDPATH}:${dir}"
+    done
+fi
