@@ -22,7 +22,7 @@ function test_ssh_host(){
         return 0
     elif lookup_host "${pattern}" &>/dev/null; then
         # Pattern resolves to an ip
-        if ! command -v nc &>/dev/null; then
+        if [[ ! ${+commands[nc]} ]]; then
             # Netcat wasn't found, try to connect
             return 0
         fi

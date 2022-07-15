@@ -1,7 +1,7 @@
 HISTFILE="${XDG_STATE_HOME}/zsh/history"
 [[ -d "${XDG_STATE_HOME}/zsh" ]] || mkdir -p "${XDG_STATE_HOME}/zsh"
 
-if [[ ! -o login ]] && command -v gbt &>/dev/null; then
+if [[ ! -o login && ${+commands[gbt]} ]]; then
     PROMPT='$(gbt $?)'
 
     export GBT_CARS='Status, Os, Hostname, Dir, Kubectl, Git, PyVirtEnv, Sign'
