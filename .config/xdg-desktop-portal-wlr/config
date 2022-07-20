@@ -1,0 +1,4 @@
+[screencast]
+output_name=eDP-1
+chooser_type=simple
+chooser_cmd=slurp -f %o -or

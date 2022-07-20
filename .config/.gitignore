@@ -23,5 +23,6 @@
 /vim/.netrwhist
 !/wofi/
 !/waybar/
+!/xdg-desktop-portal-wlr/
 !/yamllint/
 !/zsh/
