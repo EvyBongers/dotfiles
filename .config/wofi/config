@@ -1,0 +1,36 @@
+# Specifies the key to use in order to move up
+key_up=Up
+
+# Specifies the key to use in order to move down
+key_down=Down
+
+# Specifies the key to use in order to move left
+key_left=Left
+
+# Specifies the key to use in order to move right
+key_right=Right
+
+# Specifies the key to use in order to move forward
+key_forward=
+
+# Specifies the key to use in order to move backward
+key_backward=
+
+# Specifies the key to use in order to submit an action
+key_submit=Return
+
+# Specifies the key to use in order to exit wofi
+key_exit=Escape
+
+# Specifies the key to use in order to move one page up
+key_pgup=Page_Up
+
+# Specifies the key to use in order to move one page down
+key_pgdn=Page_Down
+
+# Specifies the key to use in order to expand/contract multi-action entires
+key_expand=Tab
+
+# Specifies the key to use in order to hide/show the search bar
+key_hide_search=
+

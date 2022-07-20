@@ -21,6 +21,7 @@
 !/terminator/
 !/vim/
 /vim/.netrwhist
+!/wofi/
 !/waybar/
 !/yamllint/
 !/zsh/

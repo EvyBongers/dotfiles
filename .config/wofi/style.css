@@ -1,0 +1,43 @@
+#window,
+#input,
+#entry {
+  border-color: rgba(0, 0, 0, 0);
+  border-radius: 15px;
+  margin: 2px;
+}
+
+#input,
+#entry {
+  background-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+}
+
+#input,
+#entry:selected {
+  border-color: rgba(25, 255, 180, 1);
+}
+
+#input {
+  margin-bottom: 5px;
+}
+
+#inner-box > #entry {
+  padding: 5px;
+}
+
+#inner-box > #entry:selected {
+  padding: 5px 10px;
+}
+
+#inner-box > #entry:selected > * > *:nth-child(2) {
+  margin: 0 -5px;
+}
+
+#inner-box > #entry:selected #entry:selected {
+  border-color: rgba(25, 255, 180, 0);
+  border-left-color: rgba(25, 255, 180, 1);
+  border-left-width: 10px;
+  border-radius: 0;
+  padding: 2px 10px;
+}
