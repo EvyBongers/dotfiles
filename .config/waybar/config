@@ -23,6 +23,7 @@
             "backlight",
             "pulseaudio",
             "bluetooth",
+            "custom/darkmode",
             "idle_inhibitor",
         ],
         "backlight": {
@@ -69,6 +70,12 @@
         },
         "sway/language": {
             "format": " {long}",
+        },
+        "custom/darkmode": {
+            "exec": "$HOME/.config/waybar/darkmode.py 2> /dev/null",
+            "format": "{}",
+            "on-click": "darkman toggle",
+            "return-type": "json",
         },
         "custom/spotify": {
             "exec": "$HOME/.config/waybar/spotify.py 2> /dev/null",
