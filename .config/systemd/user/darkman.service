@@ -1,0 +1,23 @@
+[Unit]
+Description=Framework for dark-mode and light-mode transitions.
+Documentation=man:darkman(1)
+PartOf=graphical-session.target
+BindsTo=graphical-session.target
+After=geoclue-demo-agent.service
+
+[Service]
+Type=dbus
+BusName=nl.whynothugo.darkman
+ExecStart=/usr/bin/darkman run
+Restart=on-failure
+TimeoutStopSec=15
+Slice=background.slice
+# Security hardening:
+LockPersonality=yes
+RestrictNamespaces=yes
+SystemCallArchitectures=native
+SystemCallFilter=@system-service @timer
+MemoryDenyWriteExecute=yes
+
+[Install]
+WantedBy=graphical-session.target
