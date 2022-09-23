@@ -1,3 +1,7 @@
+#window * {
+  color: inherit;
+}
+
 #window,
 #input,
 #entry {
@@ -8,7 +12,7 @@
 
 #input,
 #entry {
-  background-color: transparent;
+  background-color: initial;
   border-style: solid;
   border-width: 1px;
 }
