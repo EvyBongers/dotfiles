@@ -1,0 +1,13 @@
+[Unit]
+Description=The Swayest Workstyle
+Documentation=man:sworkstyle(1)
+PartOf=graphical-session.target
+BindsTo=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart= /usr/bin/sworkstyle
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target
