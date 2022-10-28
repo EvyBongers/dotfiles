@@ -89,6 +89,9 @@ input type:keyboard {
     xkb_options caps:escape_shifted_capslock,compose:ralt
     xkb_numlock disabled
 }
+input vendor:13462 {
+    xkb_layout us
+}
 
 ### Key bindings
 #
