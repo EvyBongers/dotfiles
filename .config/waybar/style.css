@@ -1,6 +1,6 @@
 @import "/etc/xdg/waybar/style.css";
 
-* {
+label {
   min-height: 0;
   font-size: 16px;
 }
