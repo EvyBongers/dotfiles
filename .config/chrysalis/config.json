@@ -1,0 +1,22 @@
+{
+	"keyboard": {
+		"layout": "United States-International"
+	},
+	"breaking-news": {
+		"seen": {
+			"firmware": {
+				"0": {
+					"90": {
+						"1": true
+					}
+				}
+			}
+		}
+	},
+	"ui": {
+		"layoutCards": {
+			"colored": true,
+			"oneLayerPerPage": true
+		}
+	}
+}

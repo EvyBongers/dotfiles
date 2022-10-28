@@ -1,6 +1,7 @@
 /*
 !/.gitignore
 !/alacritty/
+!/chrysalis/
 !/chromium-flags.conf
 !/chromium/NativeMessagingHosts/gpgmejson.json
 !/environment.d/
