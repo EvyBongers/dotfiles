@@ -7,3 +7,5 @@ if [[ -d "${HOME}/projects" ]]; then
         CDPATH="${CDPATH}:${dir}"
     done
 fi
+
+unset dir

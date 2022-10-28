@@ -12,3 +12,5 @@ fi
 for file in "${ZDOTDIR}"/*.zsh; do
     [[ -r "${file}" ]] && source "${file}"
 done
+
+unset file

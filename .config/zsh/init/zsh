@@ -4,13 +4,14 @@ HISTFILE="${XDG_STATE_HOME}/zsh/history"
 if [[ ! -o login && ${+commands[gbt]} ]]; then
     PROMPT='$(gbt $?)'
 
-    export GBT_CARS='Status, Os, Hostname, Dir, Kubectl, Git, PyVirtEnv, Sign'
+    GBT_CARS='Status, Os, Hostname, Dir, Kubectl, Git, PyVirtEnv, Sign'
 
     # Tell python virtualenv to leave the prompt alone
-    export VIRTUAL_ENV_DISABLE_PROMPT='1'
+    VIRTUAL_ENV_DISABLE_PROMPT='1'
 else
     ZSH_THEME="afowler"
 fi
+set +a
 
 # Make sure gpg agent is available on this tty during initialization
 gpg-connect-agent updatestartuptty /bye &>/dev/null

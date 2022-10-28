@@ -28,6 +28,8 @@ declare -A optional_plugins=(
   [virtualenvwrapper.sh]=virtualenvwrapper
 )
 
-for key in "${(k)optional_plugins[@]}"; do
-    [[ ${+commands[${key}]} -eq 1 ]] && plugins+=(${optional_plugins[${key}]})
+for prog plugin in "${(kv)optional_plugins[@]}"; do
+    [[ ${+commands[${prog}]} -eq 1 ]] && plugins+=(${plugin})
 done
+
+unset prog plugin optional_plugins
