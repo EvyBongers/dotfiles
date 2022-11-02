@@ -18,7 +18,6 @@
             "cpu",
             "memory",
             "network",
-            "sway/language",
             "battery",
             "backlight",
             "pulseaudio",
@@ -67,9 +66,6 @@
             "format": " {}",
             "interval": 300,
             "return-type": "json",
-        },
-        "sway/language": {
-            "format": " {long}",
         },
         "custom/darkmode": {
             "exec": "$HOME/.config/waybar/darkmode.py 2> /dev/null",
