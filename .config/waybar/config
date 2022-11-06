@@ -3,9 +3,16 @@
         "layer": "top",
         "position": "top",
         "spacing": 4,
-        "modules-left": ["sway/workspaces", "sway/mode"],
+        "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode"],
         "modules-center": ["sway/window"],
         "modules-right": ["tray", "clock"],
+        "sway/scratchpad": {
+            "format": "{icon} {count}",
+            "show-empty": false,
+            "format-icons": ["", ""],
+            "tooltip": true,
+            "tooltip-format": "{app}: {title}"
+        },
     },
     {
         "layer": "top",
