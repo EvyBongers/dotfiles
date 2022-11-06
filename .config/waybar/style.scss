@@ -7,11 +7,12 @@ window#waybar {
   background-color: rgba(43, 48, 59, 0.5);
   border-bottom: 3px solid rgba(100, 114, 125, 0.5);
   color: #ffffff;
-  transition-duration: 0.5s;
+  transition-duration: .5s;
   transition-property: background-color;
-}
-window#waybar.hidden {
-  opacity: 0.2;
+
+  &.hidden {
+    opacity: 0.2;
+  }
 }
 
 button {
@@ -30,9 +31,10 @@ button:hover {
 
 label {
   min-height: 0;
-}
-label:focus {
-  background-color: #000000;
+
+  &:focus {
+    background-color: #000000;
+  }
 }
 
 @keyframes blink {
@@ -41,17 +43,21 @@ label:focus {
     color: #000000;
   }
 }
+
 /* On the leftmost module, omit left margin */
 .modules-left > widget:first-child {
   margin-left: 0;
 }
 
 /* On the rightmost module, omit right margin */
-.modules-right > widget:last-child {
-  margin-right: 0;
-}
-.modules-right .text-button {
-  padding: 0 10px;
+.modules-right {
+  > widget:last-child {
+    margin-right: 0;
+  }
+
+  .text-button {
+    padding: 0 10px;
+  }
 }
 
 #backlight {
@@ -64,32 +70,37 @@ label:focus {
   background-color: #ffffff;
   color: #000000;
   padding: 0 10px;
-}
-#battery.charging, #battery.plugged {
-  background-color: #26A65B;
-  color: #ffffff;
-}
-#battery.critical:not(.charging) {
-  animation-direction: alternate;
-  animation-duration: 0.5s;
-  animation-iteration-count: infinite;
-  animation-name: blink;
-  animation-timing-function: linear;
-  background-color: #f53c3c;
-  color: #ffffff;
+
+  &.charging, &.plugged {
+    background-color: #26A65B;
+    color: #ffffff;
+  }
+
+  &.critical:not(.charging) {
+    animation-direction: alternate;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-name: blink;
+    animation-timing-function: linear;
+    background-color: #f53c3c;
+    color: #ffffff;
+  }
 }
 
 #bluetooth {
   background-color: #30408c;
-}
-#bluetooth.connected {
-  color: #299d0b;
-}
-#bluetooth.disabled {
-  color: #d53b2f;
-}
-#bluetooth.on {
-  color: #ffffff;
+
+  &.connected {
+    color: #299d0b;
+  }
+
+  &.disabled {
+    color: #d53b2f;
+  }
+
+  &.on {
+    color: #ffffff;
+  }
 }
 
 #clock {
@@ -108,18 +119,22 @@ label:focus {
 #custom-arch_updates {
   background-color: #2ecc71;
   color: #000000;
-}
-#custom-arch_updates.pending {
-  background-color: #f1c40f;
+
+  &.pending {
+    background-color: #f1c40f;
+  }
 }
 
-#custom-darkmode.dark {
-  background-color: #000000;
-  color: #ffffff;
-}
-#custom-darkmode.light {
-  background-color: #ffffff;
-  color: #000000;
+#custom-darkmode {
+  &.dark {
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  &.light {
+    background-color: #ffffff;
+    color: #000000;
+  }
 }
 
 #custom-spotify {
@@ -137,10 +152,11 @@ label:focus {
   background-color: #2d3436;
   color: #ffffff;
   padding: 0 10px;
-}
-#idle_inhibitor.activated {
-  background-color: #ecf0f1;
-  color: #2d3436;
+
+  &.activated {
+    background-color: #ecf0f1;
+    color: #2d3436;
+  }
 }
 
 #memory {
@@ -160,41 +176,46 @@ label:focus {
   background-color: #2980b9;
   color: #ffffff;
   padding: 0 10px;
-}
-#network.disconnected {
-  background-color: #f53c3c;
+
+  &.disconnected {
+    background-color: #f53c3c;
+  }
 }
 
 #pulseaudio {
   background-color: #f1c40f;
   color: #000000;
   padding: 0 10px;
-}
-#pulseaudio.muted {
-  background-color: #90b1b1;
-  color: #2a5c45;
+
+  &.muted {
+    background-color: #90b1b1;
+    color: #2a5c45;
+  }
 }
 
 #scratchpad {
   background: rgba(0, 0, 0, 0.2);
   color: #ffffff;
   padding: 0 10px;
-}
-#scratchpad.empty {
-  background-color: transparent;
+
+  &.empty {
+    background-color: transparent;
+  }
 }
 
 #tray {
   background-color: #2980b9;
   color: #ffffff;
   padding: 0 10px;
-}
-#tray > .needs-attention {
-  -gtk-icon-effect: highlight;
-  background-color: #eb4d4b;
-}
-#tray > .passive {
-  -gtk-icon-effect: dim;
+
+  > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+  }
+
+  > .passive {
+    -gtk-icon-effect: dim;
+  }
 }
 
 #window {
@@ -203,19 +224,23 @@ label:focus {
 
 #workspaces {
   margin: 0 4px;
-}
-#workspaces button {
-  background-color: transparent;
-  color: #ffffff;
-  padding: 0 5px;
-}
-#workspaces button:hover {
-  background: rgba(0, 0, 0, 0.2);
-}
-#workspaces button.focused {
-  background-color: #64727D;
-  box-shadow: inset 0 -3px #ffffff;
-}
-#workspaces button.urgent {
-  background-color: #eb4d4b;
+
+  button {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 0 5px;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    &.focused {
+      background-color: #64727D;
+      box-shadow: inset 0 -3px #ffffff;
+    }
+
+    &.urgent {
+      background-color: #eb4d4b;
+    }
+  }
 }
