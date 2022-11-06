@@ -18,6 +18,7 @@
         "layer": "top",
         "position": "bottom",
         "spacing": 4,
+        "fixed-center": false,
         "modules-right": [
             "custom/spotify",
             "custom/arch_updates",
