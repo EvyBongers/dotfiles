@@ -21,12 +21,12 @@ button {
   border-radius: 0;
   /* Use box-shadow instead of border so the text isn't offset */
   box-shadow: inset 0 -3px transparent;
-}
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-button:hover {
-  background: inherit;
-  box-shadow: inset 0 -3px #ffffff;
+  /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+  &:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #ffffff;
+  }
 }
 
 label {
@@ -55,7 +55,7 @@ label {
     margin-right: 0;
   }
 
-  .text-button {
+  widget > label {
     padding: 0 10px;
   }
 }
@@ -63,13 +63,11 @@ label {
 #backlight {
   background-color: #90b1b1;
   color: #ffffff;
-  padding: 0 10px;
 }
 
 #battery {
   background-color: #ffffff;
   color: #000000;
-  padding: 0 10px;
 
   &.charging, &.plugged {
     background-color: #26A65B;
@@ -106,14 +104,12 @@ label {
 #clock {
   background-color: #64727D;
   color: #ffffff;
-  padding: 0 10px;
 }
 
 #cpu {
   background-color: #2ecc71;
   color: #000000;
   min-width: 4em;
-  padding: 0 10px;
 }
 
 #custom-arch_updates {
@@ -145,13 +141,11 @@ label {
 #disk {
   background-color: #964B00;
   color: #ffffff;
-  padding: 0 10px;
 }
 
 #idle_inhibitor {
   background-color: #2d3436;
   color: #ffffff;
-  padding: 0 10px;
 
   &.activated {
     background-color: #ecf0f1;
@@ -162,20 +156,17 @@ label {
 #memory {
   background-color: #9b59b6;
   color: #ffffff;
-  padding: 0 10px;
 }
 
 #mode {
   background-color: #64727D;
   border-bottom: 3px solid #ffffff;
   color: #ffffff;
-  padding: 0 10px;
 }
 
 #network {
   background-color: #2980b9;
   color: #ffffff;
-  padding: 0 10px;
 
   &.disconnected {
     background-color: #f53c3c;
@@ -185,7 +176,6 @@ label {
 #pulseaudio {
   background-color: #f1c40f;
   color: #000000;
-  padding: 0 10px;
 
   &.muted {
     background-color: #90b1b1;
@@ -196,7 +186,6 @@ label {
 #scratchpad {
   background: rgba(0, 0, 0, 0.2);
   color: #ffffff;
-  padding: 0 10px;
 
   &.empty {
     background-color: transparent;
@@ -206,7 +195,6 @@ label {
 #tray {
   background-color: #2980b9;
   color: #ffffff;
-  padding: 0 10px;
 
   > .needs-attention {
     -gtk-icon-effect: highlight;
