@@ -3,8 +3,8 @@ Description=FUSE filesystem over Google Drive
 After=network.target
 
 [Service]
-ExecStart=google-drive-ocamlfuse -xdgbd -label %i %h/drive/%i
-ExecStop=fusermount -u %h/drive/%i
+ExecStart=google-drive-ocamlfuse -xdgbd -label %I %h/drive/%I
+ExecStop=fusermount -u %h/drive/%I
 Restart=always
 Type=forking
 
