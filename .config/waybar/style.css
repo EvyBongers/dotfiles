@@ -49,7 +49,7 @@ label:focus {
 .modules-right > widget:last-child {
   margin-right: 0;
 }
-.modules-right widget > label {
+.modules-right widget > box, .modules-right widget > label {
   padding: 0 10px;
 }
 
