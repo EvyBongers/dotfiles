@@ -35,7 +35,7 @@ exec_always {
     gsettings set $gnome-schema gtk-theme 'Adwaita'
     gsettings set $gnome-schema icon-theme 'Adwaita'
     gsettings set $gnome-schema cursor-theme 'Adwaita'
-    gsettings set $gnome-schema font-name 'Dejavu Sans Book 11'
+    gsettings set $gnome-schema font-name 'Lexend Deca 11'
 }
 
 ### Output configuration
