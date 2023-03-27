@@ -5,6 +5,7 @@ fallback = ''
 [matching]
 'Alacritty' = ''
 'chromium' = ''
+'google-chrome' = ''
 'chrysalis' = ''
 'discord' = ''
 'firefox' = ''
