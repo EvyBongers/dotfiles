@@ -1,5 +1,7 @@
 # Import SSH_AUTH_SOCK into systemd user environment
-systemctl --user import-environment SSH_AUTH_SOCK
+if [[ -n "${DBUS_SESSION_BUS_ADDRESS}" && -S "${DBUS_SESSION_BUS_ADDRESS#*=}" ]]; then
+    systemctl --user import-environment SSH_AUTH_SOCK
+fi
 
 # Have OpenSSH support XDG base directories
 alias scp="scp -F ${XDG_CONFIG_HOME}/ssh/config"
